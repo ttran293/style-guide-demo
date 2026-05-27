@@ -13,12 +13,49 @@
     <div id="sg-content-source">
       <h1>Dropdowns</h1>
       <p class="sg-lead">
-        A dropdown is a UI control that presents a compact list for choosing one option or executing actions. This
-        page covers both selection pickers and hierarchical menus.
+        A dropdown presents a compact list for choosing one option or executing related actions. This page covers
+        selection pickers (native select) and action menus (custom menu panels).
       </p>
 
-      <h2>Selection dropdown (standard)</h2>
-      <p>Single option from a predefined set (country, font, category). Fit the maximum useful options without overcrowding; use scroll or grouping for long lists.</p>
+      <h2>When to use</h2>
+      <ul>
+        <li>Choosing one value from a predefined set (type, category, sort order).</li>
+        <li>Grouping secondary actions under a trigger (Export, Share, More).</li>
+        <li>Space-constrained toolbars where a full button row would not fit.</li>
+      </ul>
+
+      <h2>When not to use</h2>
+      <ul>
+        <li>Two to five equally important options — use visible <a class="link" href="/components/button.html">Buttons</a> or radio groups.</li>
+        <li>Multi-select of many items — consider a list with checkboxes.</li>
+        <li>Navigation to a new page — use <a class="link" href="/components/hyperlink.html">Hyperlinks</a> or navbar items.</li>
+      </ul>
+
+      <h2>Variants</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Selection dropdown</td>
+            <td>Single value from a fixed list; use native <code>&lt;select&gt;</code> in forms when possible</td>
+          </tr>
+          <tr>
+            <td>Action menu</td>
+            <td>Commands or navigation; group with dividers, sentence case labels</td>
+          </tr>
+          <tr>
+            <td>Multi-level menu</td>
+            <td>Deep hierarchies; prefer flattening or search for more than two levels</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Example — selection</h2>
       <div class="sg-preview">
         <div class="form-group" style="max-width: 240px; margin: 0">
           <label class="label" for="dd-type">Image type</label>
@@ -31,30 +68,47 @@
         </div>
       </div>
 
-      <h2>Action menu</h2>
-      <p>List of actions or navigation options. Use dividing lines between groups, not full borders.</p>
-      <div class="sg-preview">
-        <div class="dropdown-menu">
-          <button type="button" class="dropdown-item">Open recent</button>
-          <button type="button" class="dropdown-item">Save as</button>
-          <hr class="divider dropdown-divider" />
-          <button type="button" class="dropdown-item">Export to TIFF</button>
-          <button type="button" class="dropdown-item">Export to JPEG</button>
+      <h2>Example — action menu</h2>
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+          <div class="sg-preview">
+            <div class="dropdown-menu">
+              <button type="button" class="dropdown-item">Open recent</button>
+              <button type="button" class="dropdown-item">Save as</button>
+              <hr class="divider dropdown-divider" />
+              <button type="button" class="dropdown-item">Export to TIFF</button>
+              <button type="button" class="dropdown-item">Export to JPEG</button>
+            </div>
+          </div>
+        </div>
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+          <div class="sg-preview">
+            <div class="dropdown-menu">
+              <button type="button" class="dropdown-item">Open recent</button>
+              <button type="button" class="dropdown-item">Save as</button>
+              <hr class="divider dropdown-divider" />
+              <button type="button" class="dropdown-item">Export to TIFF</button>
+              <button type="button" class="dropdown-item">Export to JPEG</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <h2>Multi-level dropdown</h2>
-      <p>Nested submenus for complex navigation or settings. Show hierarchy with indent, arrows, or icons. Consider back navigation or breadcrumbs for deep trees.</p>
-      <p class="sg-muted"><strong>Skipped for now:</strong> live nested menu demo — needs interaction design decision (hover vs click). Content migrated as guidelines only.</p>
-
-      <h2>UX tips</h2>
+      <h2>Accessibility</h2>
       <ul>
-        <li>Group options by category, relevance, or A–Z.</li>
-        <li>Use dividers or indent for hierarchy.</li>
-        <li>Add search or filter for long or nested lists.</li>
-        <li>Menu items use sentence case.</li>
-        <li>Hover highlight indicates interaction.</li>
-        <li>Use → for internal navigation and ↗ for external links when applicable.</li>
+        <li>Menus open on click (or Enter/Space on trigger); close on Escape or outside click.</li>
+        <li>Arrow keys move between items; typeahead jumps to matching labels.</li>
+        <li>Associate labels with selection controls; use <code>role="menu"</code> / <code>menuitem</code> for action menus.</li>
+        <li>Do not rely on hover alone to open menus — it fails touch and keyboard users.</li>
+      </ul>
+
+      <h2>Related components</h2>
+      <ul>
+        <li><a class="link" href="/components/forms.html">Forms</a> — select fields in form layout</li>
+        <li><a class="link" href="/components/navbar.html">Navbar</a> — user menu and overflow actions</li>
+        <li><a class="link" href="/components/bubble.html">Bubble</a> — anchored overlays with richer content</li>
       </ul>
     </div>
     <div class="sg-layout" id="sg-root"></div>

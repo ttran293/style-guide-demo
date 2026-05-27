@@ -60,6 +60,10 @@
   --color-bg-example: #ffffff;
   --color-nav-active-bg: rgba(41, 103, 196, 0.1);
   --color-toc-active: #2967c4;
+
+  --color-scrollbar-track: #f0f0f0;
+  --color-scrollbar-thumb: #c8c8c8;
+  --color-scrollbar-thumb-hover: #a0a0a0;
 }
 
 [data-theme='dark'] {
@@ -111,4 +115,8 @@
   --color-bg-example: #1c2127;
   --color-nav-active-bg: rgba(110, 168, 254, 0.12);
   --color-toc-active: #6ea8fe;
+
+  --color-scrollbar-track: #1c2127;
+  --color-scrollbar-thumb: #525252;
+  --color-scrollbar-thumb-hover: #6c757d;
 }

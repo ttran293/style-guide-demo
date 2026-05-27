@@ -13,33 +13,56 @@
     <div id="sg-content-source">
       <h1>Dialogs</h1>
       <p class="sg-lead">
-        A dialog is a modal UI surface that focuses user attention on a task or decision. Titles use sentence case;
-        allow one primary action per dialog.
+        A dialog focuses attention on a task or decision. Titles use sentence case; allow one primary action per dialog.
+        Use modals sparingly — they interrupt workflow.
       </p>
 
-      <h2>Modal vs modeless</h2>
-      <table class="sg-spec-table">
+      <h2>When to use</h2>
+      <ul>
+        <li>Confirmations and irreversible actions (delete, discard changes).</li>
+        <li>Short focused tasks that must complete before continuing (apply settings, name a file).</li>
+        <li>Critical information the user must acknowledge.</li>
+      </ul>
+
+      <h2>When not to use</h2>
+      <ul>
+        <li>Long multi-step workflows — use <a class="link" href="/components/feature-panels.html">Feature Panels</a> or a dedicated view.</li>
+        <li>Low-priority feedback — use inline validation or <a class="link" href="/components/error-handling.html">Error Handling</a> toasts.</li>
+        <li>Contextual hints — use <a class="link" href="/components/tooltips-popovers.html">Tooltips</a> or <a class="link" href="/components/bubble.html">Bubble</a>.</li>
+      </ul>
+
+      <h2>Choose the right pattern</h2>
+      <table class="sg-spec-table sg-pattern-compare">
         <thead>
           <tr>
-            <th>Type</th>
-            <th>Behavior</th>
-            <th>Use when</th>
+            <th>Pattern</th>
+            <th>Blocks app</th>
+            <th>Best for</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Modal</td>
-            <td>Blocks rest of app until dismissed</td>
-            <td>Confirmations, irreversible actions, critical info that must be addressed</td>
+            <td>Modal dialog</td>
+            <td>Yes</td>
+            <td>Confirmations, critical decisions, short forms</td>
           </tr>
           <tr>
-            <td>Modeless</td>
-            <td>User can interact elsewhere</td>
-            <td>Tools or settings that adjust another active feature with immediate visible effect</td>
+            <td>Modeless dialog</td>
+            <td>No</td>
+            <td>Tools that adjust the active view with live preview</td>
+          </tr>
+          <tr>
+            <td><a class="link" href="/components/feature-panels.html">Feature panel</a></td>
+            <td>No</td>
+            <td>Multi-section settings, wizards, persistent side panels</td>
+          </tr>
+          <tr>
+            <td><a class="link" href="/components/bubble.html">Bubble</a></td>
+            <td>No</td>
+            <td>Lightweight contextual UI anchored to a trigger</td>
           </tr>
         </tbody>
       </table>
-      <p>Use modals sparingly — they are interruptive. Low/medium priority info belongs in a snackbar or toast instead.</p>
 
       <h2>Anatomy</h2>
       <table class="sg-spec-table">
@@ -51,60 +74,90 @@
         </thead>
         <tbody>
           <tr>
+            <td>Scrim</td>
+            <td>Dimmed backdrop for modal dialogs</td>
+          </tr>
+          <tr>
             <td>Container</td>
-            <td>Raised surface above other UI</td>
+            <td>Raised surface (<a class="link" href="/foundations/elevation.html">elevation</a> overlay level)</td>
           </tr>
           <tr>
             <td>Title</td>
-            <td>Brief, clear statement — avoid “Are you sure?” or alarmist copy</td>
+            <td>Brief, clear — avoid alarmist copy</td>
           </tr>
           <tr>
             <td>Body</td>
-            <td>Concise context and consequences; do not repeat the title</td>
-          </tr>
-          <tr>
-            <td>Divider</td>
-            <td>Optional separator between header and body</td>
+            <td>Concise context; do not repeat the title</td>
           </tr>
           <tr>
             <td>Actions</td>
-            <td>Max two actions recommended; one primary only</td>
+            <td>Max two recommended; one primary only</td>
           </tr>
         </tbody>
       </table>
 
       <h2>Button placement</h2>
-      <p>Primary action on the <strong>right</strong>, secondary on the left (Z-pattern reading). User reviews cancel/dismiss before committing to the primary action. Labels should be outcome verbs: Delete, Save, Continue — not vague Yes/Submit.</p>
-      <ul>
-        <li><strong>Single action:</strong> acknowledgment only (OK, Got it, Close)</li>
-        <li><strong>Two actions:</strong> confirming (primary) + dismissing (secondary)</li>
-      </ul>
+      <p>Primary action on the <strong>right</strong>, secondary on the left. Labels should be outcome verbs: Delete, Save, Continue — not vague Yes/Submit.</p>
 
       <h2>Example</h2>
-      <div class="sg-preview">
-        <div class="dialog-demo">
-          <div class="dialog">
-            <div class="dialog-header">Capture settings</div>
-            <div class="dialog-body">
-              <div class="form-group">
-                <label class="label" for="dlg-exposure">Exposure time (ms)</label>
-                <input class="input" id="dlg-exposure" type="number" value="100" />
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+          <div class="sg-preview">
+            <div class="dialog-demo">
+              <div class="dialog">
+                <div class="dialog-header">Capture settings</div>
+                <div class="dialog-body">
+                  <div class="form-group">
+                    <label class="label" for="dlg-exposure">Exposure time (ms)</label>
+                    <input class="input" id="dlg-exposure" type="number" value="100" />
+                  </div>
+                  <p class="sg-muted" style="margin: 0">Changes apply to the next capture only.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button type="button" class="btn btn-secondary">Cancel</button>
+                  <button type="button" class="btn btn-primary">Apply</button>
+                </div>
               </div>
-              <p class="sg-muted" style="margin: 0">Changes apply to the next capture only.</p>
             </div>
-            <div class="dialog-footer">
-              <button type="button" class="btn btn-secondary">Cancel</button>
-              <button type="button" class="btn btn-primary">Apply</button>
+          </div>
+        </div>
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+          <div class="sg-preview">
+            <div class="dialog-demo">
+              <div class="dialog">
+                <div class="dialog-header">Capture settings</div>
+                <div class="dialog-body">
+                  <div class="form-group">
+                    <label class="label" for="dlg-exposure-dark">Exposure time (ms)</label>
+                    <input class="input" id="dlg-exposure-dark" type="number" value="100" />
+                  </div>
+                  <p class="sg-muted" style="margin: 0">Changes apply to the next capture only.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button type="button" class="btn btn-secondary">Cancel</button>
+                  <button type="button" class="btn btn-primary">Apply</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <h2>Guidelines</h2>
+      <h2>Accessibility</h2>
       <ul>
-        <li>Primary button is a verb — Apply, Save, Delete.</li>
-        <li>Escape dismisses modal overlays; trap focus inside the dialog.</li>
-        <li>Use low-contrast divider between header and body, not full enclosing borders.</li>
+        <li>Trap focus inside modal dialogs; restore focus to trigger on close.</li>
+        <li><kbd>Escape</kbd> dismisses modal overlays when appropriate.</li>
+        <li>Title is referenced with <code>aria-labelledby</code>; describe purpose in the body.</li>
+        <li>Do not disable the primary action without explaining why in the dialog body.</li>
+      </ul>
+
+      <h2>Related components</h2>
+      <ul>
+        <li><a class="link" href="/components/button.html">Button</a> — primary and secondary actions</li>
+        <li><a class="link" href="/components/forms.html">Forms</a> — fields inside dialog body</li>
+        <li><a class="link" href="/components/feature-panels.html">Feature Panels</a> — non-blocking alternatives</li>
       </ul>
     </div>
     <div class="sg-layout" id="sg-root"></div>

@@ -37,3 +37,33 @@ code, .token-name {
   font-family: var(--font-family-mono);
   font-size: 0.9em;
 }
+
+/* Scrollbars — Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+}
+
+/* Scrollbars — Chromium, Safari, Edge */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar-thumb);
+  border: 2px solid var(--color-scrollbar-track);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--color-scrollbar-track);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cognitive Bias · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Cognitive Bias</h1>
+      <p class="sg-lead">
+        Cognitive biases are systematic patterns of deviation from rationality in judgment or decision-making.
+        Part of <a class="link" href="./laws-of-ux.html">Laws of UX</a>.
+      </p>
+
+      <h2>Peak-End Rule</h2>
+      <p>
+        People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or
+        average of every moment.
+      </p>
+      <ul>
+        <li>Pay close attention to the most intense points and the final moments of the user journey.</li>
+        <li>Identify when your product is most helpful, valuable, or entertaining and design to delight the user.</li>
+        <li>People recall negative experiences more vividly than positive ones.</li>
+      </ul>
+
+      <h2>Serial Position Effect</h2>
+      <p>Users have a propensity to best remember the first and last items in a series.</p>
+      <ul>
+        <li>Placing the least important items in the middle of lists can help, since those are stored less frequently in memory.</li>
+        <li>Positioning key actions on the far left and right within navigation can increase memorization.</li>
+      </ul>
+
+      <h2>Von Restorff Effect</h2>
+      <p>
+        Also known as the Isolation Effect — when multiple similar objects are present, the one that differs from the rest
+        is most likely to be remembered.
+      </p>
+      <ul>
+        <li>Make important information or key actions visually distinctive.</li>
+        <li>Use restraint when placing emphasis to avoid elements competing or being mistaken for ads.</li>
+        <li>Don’t rely exclusively on color for contrast — consider color vision deficiency and low vision.</li>
+        <li>Consider motion sensitivity when using motion to communicate contrast.</li>
+      </ul>
+
+      <h2>Zeigarnik Effect</h2>
+      <p>People remember uncompleted or interrupted tasks better than completed tasks.</p>
+      <ul>
+        <li>Invite content discovery by providing clear signifiers of additional content.</li>
+        <li>Artificial progress toward a goal can increase motivation to complete the task.</li>
+        <li>Provide a clear indication of progress to motivate users to complete tasks.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('cognitive-bias');
+    </script>
+  </body>
+</html>

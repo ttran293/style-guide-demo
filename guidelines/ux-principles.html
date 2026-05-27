@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX Principles · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>UX Principles</h1>
+      <p class="sg-lead">
+        Fundamental principles of UX design that guide the creation of intuitive and user-friendly interfaces.
+        Part of <a class="link" href="./laws-of-ux.html">Laws of UX</a>.
+      </p>
+
+      <h2>Doherty Threshold</h2>
+      <p>Productivity soars when a computer and its users interact at a pace (&lt;400ms) that ensures neither has to wait on the other.</p>
+      <ul>
+        <li>Provide system feedback within 400 ms to keep users’ attention and increase productivity.</li>
+        <li>Use perceived performance to improve response time and reduce the perception of waiting.</li>
+        <li>Animation can visually engage people while loading or processing happens in the background.</li>
+        <li>Progress bars help make wait times tolerable, regardless of their accuracy.</li>
+        <li>Purposefully adding a delay can increase perceived value and instill trust when the process is actually faster.</li>
+      </ul>
+
+      <h2>Occam’s Razor</h2>
+      <p>Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.</p>
+      <ul>
+        <li>The best method for reducing complexity is to avoid it in the first place.</li>
+        <li>Analyze each element and remove as many as possible without compromising overall function.</li>
+        <li>Consider completion only when no additional items can be removed.</li>
+      </ul>
+
+      <h2>Pareto Principle</h2>
+      <p>For many events, roughly 80% of the effects come from 20% of the causes.</p>
+      <ul>
+        <li>Inputs and outputs are often not evenly distributed.</li>
+        <li>A large group may contain only a few meaningful contributors to the desired outcome.</li>
+        <li>Focus the majority of effort on the areas that will bring the largest benefits to the most users.</li>
+      </ul>
+
+      <h2>Postel’s Law</h2>
+      <p>Be liberal in what you accept, and conservative in what you send.</p>
+      <ul>
+        <li>Be empathetic, flexible, and tolerant of the various actions users could take or input they might provide.</li>
+        <li>Anticipate virtually anything in terms of input, access, and capability while providing a reliable interface.</li>
+        <li>The more we can anticipate and plan for in design, the more resilient the design will be.</li>
+        <li>Accept variable input, translate it to meet requirements, define boundaries, and provide clear feedback.</li>
+      </ul>
+
+      <h2>Tesler’s Law</h2>
+      <p>
+        Also known as the Law of Conservation of Complexity — for any system there is a certain amount of complexity which
+        cannot be reduced.
+      </p>
+      <ul>
+        <li>All processes have a core of complexity that must be assumed by either the system or the user.</li>
+        <li>Ensure as much as possible of the burden is lifted from users during design and development.</li>
+        <li>Take care not to simplify interfaces to the point of abstraction.</li>
+      </ul>
+
+      <h2>Further reading</h2>
+      <ul>
+        <li>
+          <a class="link link-external" href="https://www.nngroup.com/articles/complex-application-design/" target="_blank" rel="noopener noreferrer">Complex application design (NN/g)</a>
+        </li>
+        <li>
+          <a class="link link-external" href="https://www.nngroup.com/articles/paradox-of-the-active-user/" target="_blank" rel="noopener noreferrer">Paradox of the active user (NN/g)</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('ux-principles');
+    </script>
+  </body>
+</html>

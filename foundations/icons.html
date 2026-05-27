@@ -13,9 +13,22 @@
     <div id="sg-content-source">
       <h1>Icons</h1>
       <p class="sg-lead">
-        Icons are UI elements that express a single concept in ways people instantly understand. Choose solid or outline
-        styles based on recognition cues and context.
+        Icons are UI elements that express a single concept in ways people instantly understand. This guide uses
+        <a class="link" href="https://fontawesome.com/" rel="noopener noreferrer" target="_blank">Font Awesome 6</a>
+        (<code>fa-solid</code>, <code>fa-regular</code>). Choose solid or regular styles based on recognition cues and
+        context.
       </p>
+
+      <h2>Icon library</h2>
+      <p>
+        Import Font Awesome in application CSS (already included in this style guide via
+        <code>@fortawesome/fontawesome-free</code>). Use semantic icon names and keep sizes aligned to the tokens below.
+      </p>
+      <div class="sg-preview">
+        <i class="fa-solid fa-star icon" aria-hidden="true"></i>
+        <i class="fa-solid fa-gear icon-md" aria-hidden="true"></i>
+        <i class="fa-solid fa-floppy-disk icon-lg" aria-hidden="true"></i>
+      </div>
 
       <h2>Icon sizes</h2>
       <table class="sg-spec-table">
@@ -45,29 +58,29 @@
       <div class="sg-preview">
         <div class="icon-grid">
           <div class="icon-cell">
-            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="currentColor"/></svg>
+            <i class="fa-solid fa-circle icon" aria-hidden="true"></i>
             16px
           </div>
           <div class="icon-cell">
-            <svg class="icon icon-md" viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2" fill="currentColor"/></svg>
+            <i class="fa-solid fa-square icon icon-md" aria-hidden="true"></i>
             20px
           </div>
           <div class="icon-cell">
-            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" fill="currentColor"/></svg>
+            <i class="fa-solid fa-star icon icon-lg" aria-hidden="true"></i>
             24px
           </div>
         </div>
       </div>
 
-      <h2>Solid vs outline</h2>
+      <h2>Solid vs regular</h2>
       <div class="sg-preview sg-preview--grid">
         <div>
-          <p><strong>Solid</strong> — faster recognition for physical objects; use when outline creates narrow inner spacing.</p>
-          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zm6 5a3 3 0 100 6 3 3 0 000-6z" fill="currentColor"/></svg>
+          <p><strong>Solid</strong> (<code>fa-solid</code>) — faster recognition for physical objects; use when regular style creates narrow inner spacing.</p>
+          <i class="fa-solid fa-floppy-disk icon icon-lg" aria-hidden="true"></i>
         </div>
         <div>
-          <p><strong>Outline</strong> — better when characteristic cues sit on outer edges (comment bubble, trash can, key).</p>
-          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8"/></svg>
+          <p><strong>Regular</strong> (<code>fa-regular</code>) — better when characteristic cues sit on outer edges (comment bubble, trash can, key).</p>
+          <i class="fa-regular fa-comment icon icon-lg" aria-hidden="true"></i>
         </div>
       </div>
 
@@ -75,8 +88,8 @@
       <table class="sg-spec-table">
         <thead>
           <tr>
-            <th>Solid</th>
-            <th>Outline</th>
+            <th>Solid (<code>fa-solid</code>)</th>
+            <th>Regular (<code>fa-regular</code>)</th>
           </tr>
         </thead>
         <tbody>

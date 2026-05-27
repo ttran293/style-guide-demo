@@ -13,59 +13,96 @@
     <div id="sg-content-source">
       <h1>Forms</h1>
       <p class="sg-lead">
-        Forms are UI patterns for collecting user input with consistent spacing, typography, and focus states. This
-        page documents text fields, labels, validation, and related controls.
+        Forms collect user input with consistent spacing, typography, labels, and validation. Use this page for text
+        fields, selects, and field-level feedback — not for full panel layout (see Feature Panels).
       </p>
 
-      <h2>Elements</h2>
+      <h2>When to use</h2>
+      <ul>
+        <li>Collecting structured input: names, settings, filters, credentials.</li>
+        <li>Inline editing in dialogs, panels, or dedicated settings views.</li>
+        <li>Grouping related fields with labels, help text, and validation.</li>
+      </ul>
+
+      <h2>When not to use</h2>
+      <ul>
+        <li>Single binary choices — use <a class="link" href="/components/checkbox.html">Checkboxes</a> or toggles.</li>
+        <li>Choosing one action from a list — use <a class="link" href="/components/dropdown.html">Dropdowns</a>.</li>
+        <li>Primary commit actions — use <a class="link" href="/components/button.html">Button</a>, not a link styled as submit.</li>
+      </ul>
+
+      <h2>Anatomy</h2>
       <table class="sg-spec-table">
         <thead>
           <tr>
             <th>Element</th>
-            <th>Notes</th>
+            <th>Guidance</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Field wrapper</td>
-            <td>Vertical spacing between fields</td>
+            <td>Vertical stack; consistent spacing between fields (<code>--space-3</code> / 6px rhythm)</td>
           </tr>
           <tr>
             <td>Label</td>
-            <td>Sentence case; sits above the control; disable label styling when the control is disabled (checkbox/radio only)</td>
+            <td>Sentence case; above the control; associate with <code>for</code> / <code>id</code></td>
           </tr>
           <tr>
-            <td>Text input</td>
-            <td>28px min-height, focus ring</td>
+            <td>Input / select</td>
+            <td>28px min-height; border, focus ring, disabled state</td>
           </tr>
           <tr>
-            <td>Select</td>
-            <td>Same sizing and states as input; see Dropdowns for selection menus</td>
+            <td>Help text</td>
+            <td>Optional; secondary color; below control</td>
+          </tr>
+          <tr>
+            <td>Error message</td>
+            <td>Specific and actionable; linked via <code>aria-describedby</code></td>
           </tr>
         </tbody>
       </table>
 
-      <h2>Example</h2>
-      <div class="sg-preview">
-        <form style="max-width: 320px" onsubmit="return false">
-          <div class="form-group">
-            <label class="label" for="form-name">Project name</label>
-            <input class="input" id="form-name" type="text" placeholder="Enter name" />
+      <h2>Example — default fields</h2>
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+          <div class="sg-preview">
+            <form style="max-width: 320px" onsubmit="return false">
+              <div class="form-group">
+                <label class="label" for="form-name">Project name</label>
+                <input class="input" id="form-name" type="text" placeholder="Enter name" />
+              </div>
+              <div class="form-group">
+                <label class="label" for="form-type">Image type</label>
+                <select class="select" id="form-type">
+                  <option>Brightfield</option>
+                  <option>Fluorescence</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary">Save</button>
+            </form>
           </div>
-          <div class="form-group">
-            <label class="label" for="form-desc">Description</label>
-            <input class="input" id="form-desc" type="text" />
+        </div>
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+          <div class="sg-preview">
+            <form style="max-width: 320px" onsubmit="return false">
+              <div class="form-group">
+                <label class="label" for="form-name-dark">Project name</label>
+                <input class="input" id="form-name-dark" type="text" placeholder="Enter name" />
+              </div>
+              <div class="form-group">
+                <label class="label" for="form-type-dark">Image type</label>
+                <select class="select" id="form-type-dark">
+                  <option>Brightfield</option>
+                  <option>Fluorescence</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary">Save</button>
+            </form>
           </div>
-          <div class="form-group">
-            <label class="label" for="form-type">Image type</label>
-            <select class="select" id="form-type">
-              <option>Brightfield</option>
-              <option>Fluorescence</option>
-              <option>Phase contrast</option>
-            </select>
-          </div>
-          <button type="button" class="btn btn-primary">Save</button>
-        </form>
+        </div>
       </div>
 
       <h2>Validation example</h2>
@@ -73,21 +110,27 @@
         <form style="max-width: 320px" onsubmit="return false">
           <div class="form-group">
             <label class="label" for="form-email">Email address</label>
-            <input class="input is-invalid" id="form-email" type="email" value="not-an-email" aria-describedby="form-email-error" />
+            <input class="input is-invalid" id="form-email" type="email" value="not-an-email" aria-describedby="form-email-error" aria-invalid="true" />
             <div class="field-error" id="form-email-error">Enter a valid email address.</div>
           </div>
         </form>
       </div>
 
-      <h2>Guidelines</h2>
+      <h2>Accessibility</h2>
       <ul>
-        <li>Labels use sentence case and sit above controls.</li>
-        <li>Group related fields with consistent 6px spacing between controls.</li>
-        <li>Focus states use border color + subtle box shadow — never remove focus indicators.</li>
-        <li>Show inline validation on blur or submit with specific, actionable messages.</li>
-        <li>Related options use fieldset and legend (see Checkboxes).</li>
+        <li>Every input has a visible label or accessible name.</li>
+        <li>Errors are announced via text and <code>aria-invalid</code> / <code>aria-describedby</code>.</li>
+        <li>Tab order follows visual order; focus ring remains visible on all fields.</li>
+        <li>Do not rely on placeholder text alone — it is not a substitute for labels.</li>
       </ul>
-      <p class="sg-muted">See also: Feature Panels (panel layout), Disabled Controls, Alignment, Error Handling.</p>
+
+      <h2>Related components</h2>
+      <ul>
+        <li><a class="link" href="/foundations/alignment.html">Alignment</a> — label and control placement</li>
+        <li><a class="link" href="/components/error-handling.html">Error Handling</a> — validation patterns and messaging</li>
+        <li><a class="link" href="/components/feature-panels.html">Feature Panels</a> — panel layout and button placement</li>
+        <li><a class="link" href="/components/disabled-controls.html">Disabled Controls</a> — disabled field behavior</li>
+      </ul>
     </div>
     <div class="sg-layout" id="sg-root"></div>
     <script type="module">

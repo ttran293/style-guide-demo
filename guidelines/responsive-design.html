@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Responsive Design</h1>
+      <p class="sg-lead">
+        Responsive design ensures products work seamlessly across device sizes and orientations. Follow a mobile-first
+        approach — prioritize mobile, then enhance for larger screens.
+      </p>
+
+      <h2>Breakpoint system</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>Breakpoint range</th>
+            <th>Primary use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mobile</td>
+            <td>320px – 767px</td>
+            <td>Touch interactions, single-column layouts</td>
+          </tr>
+          <tr>
+            <td>Tablet</td>
+            <td>768px – 1023px</td>
+            <td>Touch and mouse, multi-column layouts</td>
+          </tr>
+          <tr>
+            <td>Desktop</td>
+            <td>1024px – 1439px</td>
+            <td>Mouse interactions, full feature access</td>
+          </tr>
+          <tr>
+            <td>Large desktop</td>
+            <td>1440px+</td>
+            <td>High-resolution displays, maximum content width</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>CSS breakpoint variables</h2>
+      <pre class="sg-code-block"><code>/* Breakpoint variables */
+--breakpoint-mobile: 320px;
+--breakpoint-tablet: 768px;
+--breakpoint-desktop: 1024px;
+--breakpoint-large: 1440px;
+
+@media (min-width: 768px) { /* Tablet and up */ }
+@media (min-width: 1024px) { /* Desktop and up */ }
+@media (min-width: 1440px) { /* Large desktop and up */ }</code></pre>
+
+      <h2>Touch targets</h2>
+      <ul>
+        <li><strong>Minimum size:</strong> 44px × 44px for all touch targets</li>
+        <li><strong>Spacing:</strong> 8px minimum between touch targets</li>
+        <li><strong>Visual feedback:</strong> Clear touch states and feedback</li>
+      </ul>
+
+      <h2>Gesture support</h2>
+      <ul>
+        <li><strong>Tap</strong> — primary interaction method</li>
+        <li><strong>Long press</strong> — context menus and additional options</li>
+        <li><strong>Swipe</strong> — navigation and content browsing</li>
+        <li><strong>Pinch</strong> — zoom where appropriate</li>
+      </ul>
+
+      <h2>Viewport</h2>
+      <pre class="sg-code-block"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"&gt;</code></pre>
+
+      <h2>Navigation patterns</h2>
+      <h3>Mobile</h3>
+      <ul>
+        <li>Hamburger menu for main navigation</li>
+        <li>Bottom navigation for primary actions</li>
+        <li>Tab navigation for content sections</li>
+        <li>Breadcrumbs for deep navigation</li>
+      </ul>
+      <h3>Desktop</h3>
+      <ul>
+        <li>Horizontal top navigation</li>
+        <li>Sidebar navigation for complex applications</li>
+        <li>Dropdown menus for secondary actions</li>
+        <li>Breadcrumbs for context</li>
+      </ul>
+
+      <h2>Table patterns</h2>
+      <p>Tables adapt to smaller screens with alternative layouts:</p>
+      <ul>
+        <li><strong>Horizontal scroll</strong> — maintain table structure with scroll</li>
+        <li><strong>Card layout</strong> — convert rows to cards</li>
+        <li><strong>Stacked layout</strong> — stack columns vertically</li>
+        <li><strong>Collapsible sections</strong> — hide less important columns</li>
+      </ul>
+
+      <h2>Form patterns</h2>
+      <h3>Mobile</h3>
+      <ul>
+        <li>Single-column layout</li>
+        <li>Larger input fields (minimum 44px height)</li>
+        <li>Appropriate input types (email, tel, number)</li>
+        <li>Inline validation with clear error messages</li>
+      </ul>
+      <h3>Desktop</h3>
+      <ul>
+        <li>Multi-column layouts where appropriate</li>
+        <li>Side-by-side form sections</li>
+        <li>Advanced input controls</li>
+        <li>Real-time validation feedback</li>
+      </ul>
+
+      <h2>Performance</h2>
+      <ul>
+        <li>Use WebP format with fallbacks; lazy-load below-the-fold images</li>
+        <li>Minimize CSS and JavaScript bundle sizes</li>
+        <li>Use CSS Grid and Flexbox for layouts</li>
+        <li>Avoid layout shifts with proper image sizing</li>
+      </ul>
+
+      <h2>Testing</h2>
+      <ul>
+        <li>Test on actual devices, not just browser dev tools</li>
+        <li>Test across browsers, orientations, and network conditions</li>
+        <li>Test with accessibility tools across breakpoints</li>
+        <li>Monitor Core Web Vitals across device types</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('responsive-design');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laws of UX · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Laws of UX</h1>
+      <p class="sg-lead">
+        Laws of UX is a collection of best practices that designers can consider when building user interfaces.
+        They are grouped into four categories below.
+      </p>
+
+      <h2>Categories</h2>
+      <div class="sg-card-grid">
+        <a class="sg-card" href="./heuristics.html">
+          <h2>Heuristics</h2>
+          <p>Rules of thumb for quick, efficient design decisions — Fitts’s Law, Hick’s Law, Jakob’s Law, and more.</p>
+        </a>
+        <a class="sg-card" href="./ux-principles.html">
+          <h2>UX Principles</h2>
+          <p>Fundamental principles for intuitive interfaces — Doherty Threshold, Occam’s Razor, Tesler’s Law, and more.</p>
+        </a>
+        <a class="sg-card" href="./gestalt.html">
+          <h2>Gestalt</h2>
+          <p>How people perceive visual information — proximity, similarity, common region, and connectedness.</p>
+        </a>
+        <a class="sg-card" href="./cognitive-bias.html">
+          <h2>Cognitive Bias</h2>
+          <p>Patterns in judgment and memory — peak-end rule, serial position, Von Restorff, and Zeigarnik effects.</p>
+        </a>
+      </div>
+
+      <h2>How to choose a law</h2>
+      <ol>
+        <li>Understand user needs and goals.</li>
+        <li>Analyze context and constraints.</li>
+        <li>Prioritize relevant principles.</li>
+        <li>Consider interface components.</li>
+        <li>Iterate based on testing and feedback.</li>
+      </ol>
+
+      <h2>Are UX laws universal?</h2>
+      <p>
+        Some laws apply broadly across interfaces; others are more specific to certain products or audiences.
+        Consider context and target users when applying them.
+      </p>
+
+      <h2>Reference</h2>
+      <p>
+        <a class="link link-external" href="https://lawsofux.com/" target="_blank" rel="noopener noreferrer">lawsofux.com</a>
+      </p>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('laws-of-ux');
+    </script>
+  </body>
+</html>

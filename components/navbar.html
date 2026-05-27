@@ -13,18 +13,32 @@
     <div id="sg-content-source">
       <h1>Navbar</h1>
       <p class="sg-lead">
-        A navbar is the top navigation bar that provides global wayfinding, user and account controls, and search
-        entry. It should remain consistent and compact across Company web products.
+        The navbar provides global wayfinding, search entry, and account controls. It should stay consistent and compact
+        across Company web products.
       </p>
+
+      <h2>When to use</h2>
+      <ul>
+        <li>Top-level app sections (Home, Workspace, Projects) on every primary view.</li>
+        <li>Global search and user/account actions reachable from any screen.</li>
+        <li>Establishing brand and current location in web applications.</li>
+      </ul>
+
+      <h2>When not to use</h2>
+      <ul>
+        <li>Context-specific toolbars — use <a class="link" href="/components/ribbon-groups.html">Ribbon Groups</a> on desktop.</li>
+        <li>Local panel actions — place buttons in <a class="link" href="/components/feature-panels.html">Feature Panels</a>.</li>
+        <li>Secondary navigation inside a section — use tabs or a sidebar list.</li>
+      </ul>
 
       <h2>Anatomy (left → right)</h2>
       <ol>
-        <li>Brand (logo)</li>
-        <li>Primary sections: Home, Workspace, My Files, Projects, All Users Files, Activity</li>
-        <li>Global search (leading icon)</li>
-        <li>System actions: Notifications, Settings</li>
+        <li>Brand (logo / product name)</li>
+        <li>Primary sections — short noun labels</li>
+        <li>Global search</li>
+        <li>System actions (notifications, settings)</li>
         <li>User menu (avatar)</li>
-        <li>Window controls (minimize, restore, close) — desktop wrapper only, not in web</li>
+        <li>Window controls — desktop shell only, not in web</li>
       </ol>
 
       <h2>Layout and spacing</h2>
@@ -38,7 +52,7 @@
         <tbody>
           <tr>
             <td>Navbar height</td>
-            <td>56px (desktop wrapper and tablet)</td>
+            <td>56px</td>
           </tr>
           <tr>
             <td>Horizontal padding</td>
@@ -58,38 +72,66 @@
           </tr>
         </tbody>
       </table>
-      <p class="sg-muted"><strong>Conflict noted:</strong> older specs list 350px in Layout and 250px in Search — reconcile when implementing in product.</p>
 
       <h2>Example</h2>
-      <div class="sg-preview">
-        <nav class="navbar-demo" aria-label="Example navbar">
-          <span class="navbar-brand">Company</span>
-          <div class="navbar-items">
-            <a href="#" class="navbar-item is-active">Home</a>
-            <a href="#" class="navbar-item">Workspace</a>
-            <a href="#" class="navbar-item">Projects</a>
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+          <div class="sg-preview">
+            <nav class="navbar-demo" aria-label="Example navbar">
+              <span class="navbar-brand">Company</span>
+              <div class="navbar-items">
+                <a href="#" class="navbar-item is-active">Home</a>
+                <a href="#" class="navbar-item">Workspace</a>
+                <a href="#" class="navbar-item">Projects</a>
+              </div>
+              <input class="navbar-search" type="search" placeholder="Search" aria-label="Search" />
+            </nav>
           </div>
-          <input class="navbar-search" type="search" placeholder="Search" aria-label="Search" />
-        </nav>
+        </div>
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+          <div class="sg-preview">
+            <nav class="navbar-demo" aria-label="Example navbar">
+              <span class="navbar-brand">Company</span>
+              <div class="navbar-items">
+                <a href="#" class="navbar-item is-active">Home</a>
+                <a href="#" class="navbar-item">Workspace</a>
+                <a href="#" class="navbar-item">Projects</a>
+              </div>
+              <input class="navbar-search" type="search" placeholder="Search" aria-label="Search" />
+            </nav>
+          </div>
+        </div>
       </div>
 
       <h2>States</h2>
       <ul>
         <li><strong>Default:</strong> secondary text color</li>
         <li><strong>Hover:</strong> background tint, pointer cursor</li>
-        <li><strong>Active/current:</strong> underlined primary section</li>
+        <li><strong>Active / current:</strong> primary underline or emphasis on current section</li>
       </ul>
 
       <h2>Responsive behavior</h2>
       <ul>
         <li><strong>≥1024px:</strong> full labels, expanded search</li>
-        <li><strong>&lt;1024px:</strong> icons only for menu items</li>
+        <li><strong>&lt;1024px:</strong> collapse to icon menu; preserve search access</li>
+      </ul>
+      <p>See <a class="link" href="/guidelines/responsive-design.html">Responsive Design</a> for breakpoints and touch targets.</p>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Wrap in <code>&lt;nav&gt;</code> with an accessible name.</li>
+        <li>Mark the current page with <code>aria-current="page"</code>.</li>
+        <li>Search field has a visible or accessible label.</li>
+        <li>Dropdown menus follow keyboard patterns from <a class="link" href="/components/dropdown.html">Dropdowns</a>.</li>
       </ul>
 
-      <h2>Interactions and content</h2>
+      <h2>Related components</h2>
       <ul>
-        <li>Dropdowns: click to open; Escape or click outside closes.</li>
-        <li>Short labels (1–2 words), nouns not verbs; avoid obscure abbreviations.</li>
+        <li><a class="link" href="/components/dropdown.html">Dropdowns</a> — user and overflow menus</li>
+        <li><a class="link" href="/components/forms.html">Forms</a> — search input styling</li>
+        <li><a class="link" href="/components/ribbon-groups.html">Ribbon Groups</a> — desktop command surface</li>
       </ul>
     </div>
     <div class="sg-layout" id="sg-root"></div>

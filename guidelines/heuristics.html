@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heuristics · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Heuristics</h1>
+      <p class="sg-lead">
+        Heuristics are rules of thumb or guidelines that help designers make decisions quickly and efficiently.
+        Part of <a class="link" href="./laws-of-ux.html">Laws of UX</a>.
+      </p>
+
+      <h2>Aesthetic-Usability Effect</h2>
+      <p>Users often perceive aesthetically pleasing design as design that’s more usable.</p>
+      <ul>
+        <li>An aesthetically pleasing design creates a positive response and leads users to believe the design works better.</li>
+        <li>People are more tolerant of minor usability issues when the design is aesthetically pleasing.</li>
+        <li>Visually pleasing design can mask usability problems and prevent issues from being discovered during testing.</li>
+      </ul>
+
+      <h2>Fitts’s Law</h2>
+      <p>
+        The time to move to a target depends on how big it is and how far away it is. Optimize both when creating UI.
+      </p>
+      <ul>
+        <li>Touch targets should be large enough for users to accurately select them.</li>
+        <li>Touch targets should have ample spacing between them.</li>
+        <li>Place targets in areas that allow them to be easily acquired.</li>
+      </ul>
+
+      <h2>Goal-Gradient Effect</h2>
+      <p>The tendency to approach a goal increases with proximity to the goal.</p>
+      <ul>
+        <li>The closer users are to completing a task, the faster they work toward reaching it.</li>
+        <li>Artificial progress toward a goal can increase motivation to complete the task.</li>
+        <li>Provide a clear indication of progress to motivate users.</li>
+      </ul>
+      <p class="sg-muted">Useful components: progress indicators, loading animations, wizard steps.</p>
+
+      <h2>Hick’s Law</h2>
+      <p>The time it takes to make a decision increases with the number and complexity of choices.</p>
+      <ul>
+        <li>Minimize choices when response times are critical.</li>
+        <li>Break complex tasks into smaller steps to decrease cognitive load.</li>
+        <li>Avoid overwhelming users by highlighting recommended options.</li>
+        <li>Use progressive onboarding to minimize cognitive load for new users.</li>
+        <li>Be careful not to simplify to the point of abstraction.</li>
+      </ul>
+
+      <h2>Jakob’s Law</h2>
+      <p>Users spend most of their time on other sites. They prefer your site to work the same way as sites they already know.</p>
+      <ul>
+        <li>Users transfer expectations from one familiar product to another that appears similar.</li>
+        <li>Leverage existing mental models so users can focus on tasks rather than learning new models.</li>
+        <li>When making changes, minimize discord by empowering users to continue using a familiar version for a limited time.</li>
+      </ul>
+
+      <h2>Miller’s Law</h2>
+      <p>The average person can only keep 7 (plus or minus 2) items in their working memory.</p>
+      <ul>
+        <li>Don’t use the “magical number seven” to justify unnecessary design limitations.</li>
+        <li>Organize content into smaller chunks to help users process, understand, and memorize easily.</li>
+        <li>Short-term memory capacity varies per individual, based on prior knowledge and situational context.</li>
+      </ul>
+      <p><strong>Methods for reducing cognitive load:</strong></p>
+      <ul>
+        <li>Avoid unnecessary elements</li>
+        <li>Leverage common design patterns</li>
+        <li>Eliminate unnecessary tasks</li>
+        <li>Minimize choices</li>
+        <li>Display choices as a group</li>
+        <li>Strive for readability</li>
+        <li>Use iconography with caution</li>
+      </ul>
+
+      <h2>Parkinson’s Law</h2>
+      <p>Any task will inflate until all of the available time is spent.</p>
+      <ul>
+        <li>Limit the time it takes to complete a task to what users expect it’ll take.</li>
+        <li>Reducing actual duration below expected duration improves the overall user experience.</li>
+        <li>Use features such as autofill to save time in forms and prevent task inflation.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('heuristics');
+    </script>
+  </body>
+</html>

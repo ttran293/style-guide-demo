@@ -17,7 +17,7 @@
         persistent state. Allow one primary action per panel; primary labels should be verbs.
       </p>
 
-      <h2>Variants</h2>
+      <h2>Style variants</h2>
       <table class="sg-spec-table">
         <thead>
           <tr>
@@ -40,6 +40,90 @@
           </tr>
         </tbody>
       </table>
+
+      <h2 id="icon-button">Icon button</h2>
+      <p>
+        Icon-only buttons save space for familiar actions (Save, Add, Settings). Always provide an accessible name via
+        <code>aria-label</code> or visually hidden text.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-primary btn-icon" aria-label="Add item">
+          <i class="fa-solid fa-plus btn__icon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-secondary btn-icon" aria-label="Settings">
+          <i class="fa-solid fa-gear btn__icon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-icon" aria-label="Save">
+          <i class="fa-solid fa-floppy-disk btn__icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <ul>
+        <li>Use 16px Font Awesome icons inside 28px primary / 24px secondary hit targets.</li>
+        <li>Pair icon + text when the action is ambiguous or first-time.</li>
+      </ul>
+
+      <h2 id="link-button">Link button</h2>
+      <p>
+        Link buttons look like hyperlinks but use <code>&lt;button&gt;</code> semantics for in-app actions that do not
+        navigate. For true navigation, use <a class="link" href="/components/hyperlink.html">Hyperlinks</a>.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-link">Learn more</button>
+        <button type="button" class="btn btn-link">Reset to defaults</button>
+        <button type="button" class="btn btn-link" disabled>Unavailable action</button>
+      </div>
+
+      <h2 id="link-icon-button">Link icon button</h2>
+      <p>Combines link appearance with a leading icon — common for help topics and external docs opened in context.</p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-link">
+          <i class="fa-solid fa-arrow-up-right-from-square btn__icon" aria-hidden="true"></i>
+          Open documentation
+        </button>
+        <button type="button" class="btn btn-link">
+          <i class="fa-solid fa-circle-info btn__icon" aria-hidden="true"></i>
+          View help topic
+        </button>
+      </div>
+
+      <h2 id="split-button">Split button</h2>
+      <p>
+        A split button pairs a primary action with a menu of related alternatives. The main area runs the default
+        action; the chevron opens a dropdown.
+      </p>
+      <div class="sg-preview">
+        <div class="btn-split">
+          <button type="button" class="btn btn-primary btn-split__main">Export</button>
+          <button type="button" class="btn btn-primary btn-split__toggle" aria-label="More export options">
+            <i class="fa-solid fa-chevron-down btn__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="btn-split" style="margin-left: var(--space-3)">
+          <button type="button" class="btn btn-secondary btn-split__main">Save</button>
+          <button type="button" class="btn btn-secondary btn-split__toggle" aria-label="More save options">
+            <i class="fa-solid fa-chevron-down btn__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <ul>
+        <li>Default action must match the most common user choice.</li>
+        <li>Menu items use the same labels as a standard <a class="link" href="/components/dropdown.html">Dropdown</a> action menu.</li>
+      </ul>
+
+      <h2 id="button-group">Button group</h2>
+      <p>Visually joins related options so users pick one of a small set (view mode, alignment, sort order).</p>
+      <div class="sg-preview">
+        <div class="btn-group" role="group" aria-label="View mode">
+          <button type="button" class="btn btn-secondary is-active">List</button>
+          <button type="button" class="btn btn-secondary">Grid</button>
+          <button type="button" class="btn btn-secondary">Details</button>
+        </div>
+      </div>
+      <ul>
+        <li>Use for 2–5 mutually exclusive options; more than five — use a dropdown.</li>
+        <li>Mark the selected option with <code>aria-pressed="true"</code> or <code>.is-active</code> styling.</li>
+        <li>Shared outer corners only — inner borders collapse between segments.</li>
+      </ul>
 
       <h2>Color tokens</h2>
       <p class="sg-muted">

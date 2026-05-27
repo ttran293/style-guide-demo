@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestalt · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Gestalt</h1>
+      <p class="sg-lead">
+        Gestalt principles describe how humans perceive and interpret visual information.
+        Part of <a class="link" href="./laws-of-ux.html">Laws of UX</a>.
+      </p>
+
+      <h2>Law of Common Region</h2>
+      <p>Elements tend to be perceived into groups if they share an area with a clearly defined boundary.</p>
+      <ul>
+        <li>Common region creates clear structure and helps users understand relationships between elements and sections.</li>
+        <li>Adding a border around an element or group is an easy way to create common region.</li>
+        <li>Common region can also be created by defining a background behind an element or group.</li>
+      </ul>
+
+      <h2>Law of Proximity</h2>
+      <p>Objects that are near each other tend to be grouped together.</p>
+      <ul>
+        <li>Proximity helps establish a relationship with nearby objects.</li>
+        <li>Elements in close proximity are perceived to share similar functionality or traits.</li>
+        <li>Proximity helps users understand and organize information faster and more efficiently.</li>
+      </ul>
+
+      <h2>Law of Prägnanz</h2>
+      <p>
+        People perceive and interpret ambiguous or complex images as the simplest form possible, because it requires the
+        least cognitive effort.
+      </p>
+      <ul>
+        <li>The human eye likes to find simplicity and order in complex shapes to avoid becoming overwhelmed.</li>
+        <li>People are better able to visually process and remember simple figures than complex figures.</li>
+        <li>The human eye simplifies complex shapes by transforming them into a single, unified shape.</li>
+      </ul>
+
+      <h2>Law of Similarity</h2>
+      <p>The human eye tends to perceive similar elements as a complete picture, shape, or group, even if separated.</p>
+      <ul>
+        <li>Elements that are visually similar will be perceived as related.</li>
+        <li>Color, shape, size, orientation, and movement can signal that elements belong to the same group.</li>
+        <li>Ensure links and navigation systems are visually differentiated from normal text elements.</li>
+      </ul>
+
+      <h2>Law of Uniform Connectedness</h2>
+      <p>Elements that are visually connected are perceived as more related than elements with no connection.</p>
+      <ul>
+        <li>Group functions of a similar nature via colors, lines, frames, or other shapes.</li>
+        <li>Use a tangible connecting reference (line, arrow, etc.) from one element to the next.</li>
+        <li>Use uniform connectedness to show context or emphasize the relationship between similar items.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('gestalt');
+    </script>
+  </body>
+</html>
