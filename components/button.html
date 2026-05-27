@@ -38,8 +38,200 @@
             <td>Tertiary</td>
             <td>Adjacent to a related control — Browse, Reset</td>
           </tr>
+          <tr>
+            <td>Outline</td>
+            <td>Brand-linked optional actions when primary is already used — Preview, Save draft, Test connection</td>
+          </tr>
         </tbody>
       </table>
+
+      <h2 id="primary-button">Primary button</h2>
+      <p>
+        Primary buttons use a solid brand fill and white label. They represent the main commit action for a panel — only
+        one primary button should appear per panel.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-primary">Launch</button>
+        <button type="button" class="btn btn-primary">Apply</button>
+        <button type="button" class="btn btn-primary">Add</button>
+        <button type="button" class="btn btn-primary" disabled>Unavailable</button>
+      </div>
+
+      <h3>When to use</h3>
+      <ul>
+        <li>The single main action that completes or commits work in a panel — <strong>Launch</strong>, <strong>Apply</strong>, <strong>Save</strong>.</li>
+        <li>Confirming irreversible actions in dialogs when paired with a secondary dismiss control.</li>
+        <li>Starting long-running or blocking operations the user explicitly requested.</li>
+      </ul>
+
+      <h3>When not to use</h3>
+      <ul>
+        <li>More than one primary button in the same panel or dialog footer.</li>
+        <li>Cancel, dismiss, or optional preview actions — use <a class="link" href="#secondary-button">secondary</a> or <a class="link" href="#outline-button">outline</a>.</li>
+        <li>Inline helpers beside a single field — use <a class="link" href="#tertiary-button">tertiary</a>.</li>
+        <li>Navigation or help — use a <a class="link" href="#link-button">link button</a>.</li>
+      </ul>
+
+      <h3 id="primary-button-icon">With icon</h3>
+      <p>
+        Primary buttons can include a leading icon when the glyph reinforces a familiar create-or-send action. Default to
+        text-only for dialog footers and confirmations; add an icon when it improves recognition without replacing the
+        label.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-plus btn__icon" aria-hidden="true"></i>
+          Add
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-upload btn__icon" aria-hidden="true"></i>
+          Upload
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-file-export btn__icon" aria-hidden="true"></i>
+          Export
+        </button>
+        <button type="button" class="btn btn-primary" disabled>
+          <i class="fa-solid fa-floppy-disk btn__icon" aria-hidden="true"></i>
+          Save
+        </button>
+      </div>
+
+      <h4>When to use an icon</h4>
+      <ul>
+        <li>Create or add entry points where a plus or upload icon matches user expectations — <strong>Add</strong>, <strong>Upload</strong>, <strong>New</strong>.</li>
+        <li>Empty-state or onboarding CTAs where one primary action needs extra visual emphasis alongside the verb.</li>
+        <li>Actions tied to a well-known glyph used consistently elsewhere in the product (export, download, share).</li>
+        <li>First-time flows where the icon clarifies an action the label alone might not convey quickly.</li>
+      </ul>
+
+      <h4>When not to use an icon</h4>
+      <ul>
+        <li>Dialog and panel footers for commit or confirm actions — use text-only <strong>Launch</strong>, <strong>Apply</strong>, <strong>Delete</strong>.</li>
+        <li>When the verb is already clear and the icon would be decorative.</li>
+        <li>When horizontal space is limited — use an <a class="link" href="#icon-button">icon-only primary button</a> with <code>aria-label</code> instead.</li>
+        <li>More than one primary button in the same panel, with or without icons.</li>
+      </ul>
+
+      <div class="sg-preview">
+        <div class="dialog-demo">
+          <div class="dialog">
+            <div class="dialog-header">Run analysis</div>
+            <div class="dialog-body">
+              <p style="margin: 0">Analysis may take several minutes. Start when settings are ready.</p>
+            </div>
+            <div class="dialog-footer">
+              <button type="button" class="btn btn-secondary">Cancel</button>
+              <button type="button" class="btn btn-primary">Launch</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="sg-muted">Panel footers: one primary on the right; label should be a verb describing the outcome.</p>
+
+      <h2 id="secondary-button">Secondary button</h2>
+      <p>
+        Secondary buttons use a neutral filled background and gray border. They support subsection actions, settings
+        entry points, and dismiss controls without competing with the primary action.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-secondary">Settings</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-secondary">Reset</button>
+        <button type="button" class="btn btn-secondary" disabled>Unavailable</button>
+      </div>
+
+      <h3>When to use</h3>
+      <ul>
+        <li>Dismiss, cancel, or close alongside a primary action in dialog and panel footers.</li>
+        <li>Subsection actions that open settings or secondary dialogs.</li>
+        <li>Neutral actions where a filled control is needed but brand emphasis is not.</li>
+      </ul>
+
+      <h3>When not to use</h3>
+      <ul>
+        <li>The main commit action for a panel — use <a class="link" href="#primary-button">primary</a>.</li>
+        <li>Brand-linked optional actions when primary is already used — use <a class="link" href="#outline-button">outline</a>.</li>
+        <li>Actions tight to one input — use <a class="link" href="#tertiary-button">tertiary</a>.</li>
+      </ul>
+
+      <div class="sg-preview">
+        <div class="dialog-demo">
+          <div class="dialog">
+            <div class="dialog-header">Delete measurement</div>
+            <div class="dialog-body">
+              <p style="margin: 0">This removes the selected ROI and its statistics. This action cannot be undone.</p>
+            </div>
+            <div class="dialog-footer">
+              <button type="button" class="btn btn-secondary">Cancel</button>
+              <button type="button" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="sg-muted">Secondary is shorter (24px) than primary (28px); dismiss sits left of primary in the footer cluster.</p>
+
+      <h2 id="tertiary-button">Tertiary button</h2>
+      <p>
+        Tertiary buttons have no fill or border by default. They sit beside a related control for lightweight, contextual
+        actions such as browsing for a file or resetting a single field.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-tertiary">Browse</button>
+        <button type="button" class="btn btn-tertiary">Reset</button>
+        <button type="button" class="btn btn-tertiary">Clear</button>
+        <button type="button" class="btn btn-tertiary" disabled>Unavailable</button>
+      </div>
+
+      <h3>When to use</h3>
+      <ul>
+        <li>Actions directly adjacent to the control they affect — filename field + <strong>Browse</strong>.</li>
+        <li>Reset or clear for a single setting without opening a dialog.</li>
+        <li>Low-emphasis actions where primary, secondary, or outline would add too much weight.</li>
+      </ul>
+
+      <h3>When not to use</h3>
+      <ul>
+        <li>Panel-level commit or dismiss actions — use <a class="link" href="#primary-button">primary</a> or <a class="link" href="#secondary-button">secondary</a>.</li>
+        <li>Brand-linked optional actions — use <a class="link" href="#outline-button">outline</a>.</li>
+        <li>When the action needs a visible border for discoverability on busy backgrounds — use outline or secondary.</li>
+      </ul>
+
+      <div class="sg-preview">
+        <div class="form-row" style="max-width: 420px">
+          <input class="input" type="text" value="C:\Projects\dataset.tif" aria-label="File path" style="flex: 1; min-width: 12rem" />
+          <button type="button" class="btn btn-tertiary">Browse</button>
+        </div>
+      </div>
+      <p class="sg-muted">Tertiary controls align on the same row as their related input; hover adds a neutral fill.</p>
+
+      <h2 id="outline-button">Outline button</h2>
+      <p>
+        Outline buttons use a transparent fill and brand-colored border. They signal a positive, on-brand action without
+        competing with the single primary button in a panel.
+      </p>
+      <div class="sg-preview">
+        <button type="button" class="btn btn-outline">Preview</button>
+        <button type="button" class="btn btn-outline">Save draft</button>
+        <button type="button" class="btn btn-outline">Test connection</button>
+        <button type="button" class="btn btn-outline" disabled>Unavailable</button>
+      </div>
+
+      <h3>When to use</h3>
+      <ul>
+        <li>A second positive action when the panel already has a primary button (e.g. <strong>Apply</strong> + <strong>Preview</strong>).</li>
+        <li>Reversible or exploratory actions on busy or tinted surfaces where a filled secondary feels too heavy.</li>
+        <li>Optional actions in empty states or toolbars where several related actions need equal weight.</li>
+      </ul>
+
+      <h3>When not to use</h3>
+      <ul>
+        <li>Cancel, dismiss, or close — use <strong><a class="link" href="#secondary-button">secondary</a></strong>.</li>
+        <li>Actions tight to a single input — use <strong><a class="link" href="#tertiary-button">tertiary</a></strong> (e.g. filename + Browse).</li>
+        <li>The main commit action for a panel — use <strong><a class="link" href="#primary-button">primary</a></strong>.</li>
+        <li>Help or navigation — use a <a class="link" href="#link-button">link button</a>.</li>
+        <li>More than two action tiers in one footer — prefer primary + secondary or primary + outline only.</li>
+      </ul>
 
       <h2 id="icon-button">Icon button</h2>
       <p>
@@ -105,9 +297,46 @@
           </button>
         </div>
       </div>
+
+      <h3 id="split-button-icon">With icon</h3>
+      <p>
+        Add a leading icon on the main action when the glyph aids recognition — export, save, share. The chevron toggle
+        stays icon-only; always provide an <code>aria-label</code> on the toggle.
+      </p>
+      <div class="sg-preview">
+        <div class="btn-split">
+          <button type="button" class="btn btn-primary btn-split__main">
+            <i class="fa-solid fa-file-export btn__icon" aria-hidden="true"></i>
+            Export
+          </button>
+          <button type="button" class="btn btn-primary btn-split__toggle" aria-label="More export options">
+            <i class="fa-solid fa-chevron-down btn__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="btn-split" style="margin-left: var(--space-3)">
+          <button type="button" class="btn btn-secondary btn-split__main">
+            <i class="fa-solid fa-floppy-disk btn__icon" aria-hidden="true"></i>
+            Save
+          </button>
+          <button type="button" class="btn btn-secondary btn-split__toggle" aria-label="More save options">
+            <i class="fa-solid fa-chevron-down btn__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="btn-split" style="margin-left: var(--space-3)">
+          <button type="button" class="btn btn-outline btn-split__main">
+            <i class="fa-solid fa-share-nodes btn__icon" aria-hidden="true"></i>
+            Share
+          </button>
+          <button type="button" class="btn btn-outline btn-split__toggle" aria-label="More share options">
+            <i class="fa-solid fa-chevron-down btn__icon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
       <ul>
         <li>Default action must match the most common user choice.</li>
         <li>Menu items use the same labels as a standard <a class="link" href="/components/dropdown.html">Dropdown</a> action menu.</li>
+        <li>Use 16px Font Awesome icons; same sizes as standard <a class="link" href="#icon-button">icon buttons</a>.</li>
+        <li>Prefer icon + text on the main action when space allows; icon-only main area only for familiar actions.</li>
       </ul>
 
       <h2 id="button-group">Button group</h2>
@@ -264,6 +493,60 @@
             </td>
           </tr>
           <tr>
+            <td>Outline</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #2967c4; background: #ffffff">Aa</span>
+                  <span class="sg-type-meta">#2967c4</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #6ea8fe; background: #1c2127">Aa</span>
+                  <span class="sg-type-meta">#6ea8fe</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Outline hover</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: rgba(41, 103, 196, 0.1)"></span>
+                  <span class="sg-type-meta">rgba(41, 103, 196, 0.1)</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: rgba(110, 168, 254, 0.12)"></span>
+                  <span class="sg-type-meta">rgba(110, 168, 254, 0.12)</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #2358a7; background: rgba(41, 103, 196, 0.1)">Aa</span>
+                  <span class="sg-type-meta">#2358a7</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #9ec5fe; background: rgba(110, 168, 254, 0.12)">Aa</span>
+                  <span class="sg-type-meta">#9ec5fe</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
             <td>Disabled</td>
             <td>
               <div class="sg-color-pair">
@@ -306,26 +589,31 @@
             <div class="sg-button-matrix__label"><strong>Primary</strong></div>
             <div class="sg-button-matrix__label"><strong>Secondary</strong></div>
             <div class="sg-button-matrix__label"><strong>Tertiary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Outline</strong></div>
 
             <div class="sg-button-matrix__label">Default</div>
-            <button type="button" class="btn btn-primary">Launch</button>
-            <button type="button" class="btn btn-secondary">Settings</button>
-            <button type="button" class="btn btn-tertiary">Browse</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-secondary">Button</button>
+            <button type="button" class="btn btn-tertiary">Button</button>
+            <button type="button" class="btn btn-outline">Button</button>
 
             <div class="sg-button-matrix__label">Hover</div>
-            <button type="button" class="btn btn-primary is-hovered">Launch</button>
-            <button type="button" class="btn btn-secondary is-hovered">Settings</button>
-            <button type="button" class="btn btn-tertiary is-hovered">Browse</button>
+            <button type="button" class="btn btn-primary is-hovered">Button</button>
+            <button type="button" class="btn btn-secondary is-hovered">Button</button>
+            <button type="button" class="btn btn-tertiary is-hovered">Button</button>
+            <button type="button" class="btn btn-outline is-hovered">Button</button>
 
             <div class="sg-button-matrix__label">Focus</div>
-            <button type="button" class="btn btn-primary is-focused">Launch</button>
-            <button type="button" class="btn btn-secondary is-focused">Settings</button>
-            <button type="button" class="btn btn-tertiary is-focused">Browse</button>
+            <button type="button" class="btn btn-primary is-focused">Button</button>
+            <button type="button" class="btn btn-secondary is-focused">Button</button>
+            <button type="button" class="btn btn-tertiary is-focused">Button</button>
+            <button type="button" class="btn btn-outline is-focused">Button</button>
 
             <div class="sg-button-matrix__label">Disabled</div>
-            <button type="button" class="btn btn-primary" disabled>Launch</button>
-            <button type="button" class="btn btn-secondary" disabled>Settings</button>
-            <button type="button" class="btn btn-tertiary" disabled>Browse</button>
+            <button type="button" class="btn btn-primary" disabled>Button</button>
+            <button type="button" class="btn btn-secondary" disabled>Button</button>
+            <button type="button" class="btn btn-tertiary" disabled>Button</button>
+            <button type="button" class="btn btn-outline" disabled>Button</button>
           </div>
         </div>
 
@@ -336,26 +624,31 @@
             <div class="sg-button-matrix__label"><strong>Primary</strong></div>
             <div class="sg-button-matrix__label"><strong>Secondary</strong></div>
             <div class="sg-button-matrix__label"><strong>Tertiary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Outline</strong></div>
 
             <div class="sg-button-matrix__label">Default</div>
-            <button type="button" class="btn btn-primary">Launch</button>
-            <button type="button" class="btn btn-secondary">Settings</button>
-            <button type="button" class="btn btn-tertiary">Browse</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-secondary">Button</button>
+            <button type="button" class="btn btn-tertiary">Button</button>
+            <button type="button" class="btn btn-outline">Button</button>
 
             <div class="sg-button-matrix__label">Hover</div>
-            <button type="button" class="btn btn-primary is-hovered">Launch</button>
-            <button type="button" class="btn btn-secondary is-hovered">Settings</button>
-            <button type="button" class="btn btn-tertiary is-hovered">Browse</button>
+            <button type="button" class="btn btn-primary is-hovered">Button</button>
+            <button type="button" class="btn btn-secondary is-hovered">Button</button>
+            <button type="button" class="btn btn-tertiary is-hovered">Button</button>
+            <button type="button" class="btn btn-outline is-hovered">Button</button>
 
             <div class="sg-button-matrix__label">Focus</div>
-            <button type="button" class="btn btn-primary is-focused">Launch</button>
-            <button type="button" class="btn btn-secondary is-focused">Settings</button>
-            <button type="button" class="btn btn-tertiary is-focused">Browse</button>
+            <button type="button" class="btn btn-primary is-focused">Button</button>
+            <button type="button" class="btn btn-secondary is-focused">Button</button>
+            <button type="button" class="btn btn-tertiary is-focused">Button</button>
+            <button type="button" class="btn btn-outline is-focused">Button</button>
 
             <div class="sg-button-matrix__label">Disabled</div>
-            <button type="button" class="btn btn-primary" disabled>Launch</button>
-            <button type="button" class="btn btn-secondary" disabled>Settings</button>
-            <button type="button" class="btn btn-tertiary" disabled>Browse</button>
+            <button type="button" class="btn btn-primary" disabled>Button</button>
+            <button type="button" class="btn btn-secondary" disabled>Button</button>
+            <button type="button" class="btn btn-tertiary" disabled>Button</button>
+            <button type="button" class="btn btn-outline" disabled>Button</button>
           </div>
         </div>
       </div>
@@ -366,29 +659,36 @@
           <tr>
             <th>State</th>
             <th>Primary</th>
-            <th>Secondary / tertiary</th>
+            <th>Secondary</th>
+            <th>Tertiary</th>
+            <th>Outline</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Default</td>
             <td>Brand background, white label</td>
-            <td>Secondary fill or transparent (tertiary); theme text color</td>
+            <td>Neutral fill, gray border, theme text</td>
+            <td>Transparent, no border</td>
+            <td>Transparent, brand border and link-colored label</td>
           </tr>
           <tr>
             <td>Hover</td>
             <td>Darker blue (light) / lighter blue (dark)</td>
-            <td>Secondary hover fill; tertiary gains hover fill</td>
+            <td>Secondary hover fill</td>
+            <td>Neutral hover fill</td>
+            <td>Light brand tint fill; darker border and label</td>
           </tr>
           <tr>
             <td>Focus</td>
-            <td>2px primary outline, 2px offset</td>
-            <td>Same focus ring on all variants</td>
+            <td colspan="4">2px primary outline, 2px offset — all variants</td>
           </tr>
           <tr>
             <td>Disabled</td>
             <td>Neutral gray fill and muted label</td>
-            <td>Muted label; tertiary stays transparent</td>
+            <td>Muted label on neutral fill</td>
+            <td>Muted label; stays transparent</td>
+            <td>Muted label and border; stays transparent</td>
           </tr>
         </tbody>
       </table>
@@ -397,7 +697,8 @@
       <ul>
         <li>Button height ≈ 2% of vertical monitor resolution (~20–35px at 1080p, ~40–60px at 4K).</li>
         <li>Primary: brand blue background, white text; disabled uses neutral gray background.</li>
-        <li>Secondary/tertiary: neutral background, dark text; disabled text muted.</li>
+        <li>Secondary: neutral fill and gray border; tertiary: transparent with no border.</li>
+        <li>Outline: transparent fill, brand border, link-colored label; hover adds a light brand tint.</li>
         <li>Include text when space permits; icon-only for standard actions (Browse, Save) when space is limited.</li>
         <li>Icons + text when the button may collapse to icon-only or the icon needs definition.</li>
       </ul>
@@ -405,8 +706,9 @@
       <h2>Usage guidelines</h2>
       <ul>
         <li>Only <strong>one primary button</strong> per panel.</li>
-        <li>Primary button text should be a <strong>verb</strong>; prefer text-only on primary buttons.</li>
-        <li>Secondary buttons align with other controls in a subsection.</li>
+        <li>Primary button text should be a <strong>verb</strong>; prefer text-only in dialog footers — use a leading icon only where noted under <a class="link" href="#primary-button-icon">Primary button with icon</a>.</li>
+        <li>Secondary buttons align with other controls in a subsection; use for dismiss and neutral actions.</li>
+        <li>Outline buttons suit optional brand-linked actions when primary is already assigned.</li>
         <li>Tertiary buttons sit beside their related control (e.g. filename + Browse).</li>
         <li>Help links use hyperlink appearance, not button styling.</li>
       </ul>

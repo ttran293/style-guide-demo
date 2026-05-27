@@ -1171,18 +1171,29 @@ body.sg-search-active {
 
 .sg-button-matrix {
   display: grid;
-  grid-template-columns: 88px repeat(3, minmax(0, 1fr));
+  grid-template-columns: 5.5rem repeat(4, minmax(5rem, 1fr));
   gap: var(--space-3) var(--space-4);
   align-items: center;
+  width: 100%;
+  padding: 2px;
 }
 
 .sg-button-matrix > .btn {
-  justify-self: start;
+  justify-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.sg-button-matrix__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  padding-right: var(--space-2);
 }
 
 .sg-theme-comparison {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-4);
 }
 
@@ -1200,11 +1211,6 @@ body.sg-search-active {
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--color-text-secondary);
-}
-
-.sg-button-matrix__label {
-  font-size: var(--text-sm);
   color: var(--color-text-secondary);
 }
 
@@ -1445,7 +1451,8 @@ body.sg-search-active {
   }
 
   .sg-button-matrix {
-    grid-template-columns: 1fr;
+    grid-template-columns: 4.5rem repeat(4, minmax(4.25rem, 1fr));
+    overflow-x: auto;
   }
 
   .sg-theme-comparison {

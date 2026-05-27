@@ -52,6 +52,13 @@
   --color-btn-tertiary-bg: transparent;
   --color-btn-tertiary-text: #000000;
   --color-btn-tertiary-hover-bg: #e6e6e6;
+  --color-btn-outline-bg: transparent;
+  --color-btn-outline-text: var(--color-link);
+  --color-btn-outline-border: var(--color-primary);
+  --color-btn-outline-hover-bg: var(--color-nav-active-bg);
+  --color-btn-outline-hover-text: var(--color-link-hover);
+  --color-btn-outline-hover-border: var(--color-primary-hover);
+  --color-btn-outline-disabled-border: var(--color-border-subtle);
 
   /* Page chrome */
   --color-bg-page: #ffffff;
@@ -111,6 +118,13 @@
   --color-btn-tertiary-bg: transparent;
   --color-btn-tertiary-text: #ffffff;
   --color-btn-tertiary-hover-bg: #525252;
+  --color-btn-outline-bg: transparent;
+  --color-btn-outline-text: var(--color-link);
+  --color-btn-outline-border: var(--color-primary);
+  --color-btn-outline-hover-bg: var(--color-nav-active-bg);
+  --color-btn-outline-hover-text: var(--color-link-hover);
+  --color-btn-outline-hover-border: var(--color-primary-hover);
+  --color-btn-outline-disabled-border: var(--color-border-subtle);
 
   --color-bg-page: #1c2127;
   --color-bg-sidebar: var(--color-bg-page);
