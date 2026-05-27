@@ -55,13 +55,16 @@
 
   /* Page chrome */
   --color-bg-page: #ffffff;
-  --color-bg-sidebar: #f8f9fa;
+  --color-bg-sidebar: var(--color-bg-page);
   --color-bg-code: #f1f3f5;
   --color-bg-example: #ffffff;
   --color-nav-active-bg: rgba(41, 103, 196, 0.1);
+  --color-nav-hover-bg: var(--color-btn-secondary-hover-bg);
+  --color-nav-active-text: var(--color-link);
+  --color-nav-active-indicator: var(--color-link);
   --color-toc-active: #2967c4;
 
-  --color-scrollbar-track: #f0f0f0;
+  --color-scrollbar-track: var(--color-bg-page);
   --color-scrollbar-thumb: #c8c8c8;
   --color-scrollbar-thumb-hover: #a0a0a0;
 }
@@ -110,13 +113,16 @@
   --color-btn-tertiary-hover-bg: #525252;
 
   --color-bg-page: #1c2127;
-  --color-bg-sidebar: #141820;
+  --color-bg-sidebar: var(--color-bg-page);
   --color-bg-code: #2c333b;
   --color-bg-example: #1c2127;
   --color-nav-active-bg: rgba(110, 168, 254, 0.12);
+  --color-nav-hover-bg: var(--color-btn-secondary-hover-bg);
+  --color-nav-active-text: var(--color-link);
+  --color-nav-active-indicator: var(--color-link);
   --color-toc-active: #6ea8fe;
 
-  --color-scrollbar-track: #1c2127;
+  --color-scrollbar-track: var(--color-bg-page);
   --color-scrollbar-thumb: #525252;
   --color-scrollbar-thumb-hover: #6c757d;
 }

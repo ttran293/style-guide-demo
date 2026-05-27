@@ -386,8 +386,8 @@ export function initLayout(activeId) {
             <span class="sg-nav-open__bar" aria-hidden="true"></span>
           </button>
           <button type="button" class="sg-search-open" id="sg-search-open" aria-label="Search pages">
-            <span aria-hidden="true">⌕</span>
-            <span class="sg-search-open__label">Search</span>
+            <i class="fa-solid fa-magnifying-glass sg-search-open__icon" aria-hidden="true"></i>
+            <span class="sg-search-open__label">Search pages…</span>
             <kbd class="sg-search-open__kbd" aria-hidden="true">Ctrl K</kbd>
           </button>
         </div>
@@ -415,7 +415,14 @@ export function initLayout(activeId) {
           <label class="sg-search__label" for="sg-search-input">Search pages</label>
           <button type="button" class="sg-search__close" aria-label="Close search">×</button>
         </div>
-        <input class="sg-search__input" id="sg-search-input" type="search" placeholder="Search by page name or topic…" autocomplete="off" />
+        <div class="sg-search__field">
+          <i class="fa-solid fa-magnifying-glass sg-search__field-icon" aria-hidden="true"></i>
+          <input class="sg-search__input" id="sg-search-input" type="search" placeholder="Search by page name or topic…" autocomplete="off" />
+        </div>
+        <div class="sg-search-recent-header" id="sg-search-recent-header" hidden>
+          <p class="sg-search-section__title">Recent searches</p>
+          <button type="button" class="sg-search-recent-clear" id="sg-search-recent-clear">Clear</button>
+        </div>
         <ul class="sg-search__results" id="sg-search-results" role="listbox" aria-label="Search results"></ul>
       </div>
     </div>`;

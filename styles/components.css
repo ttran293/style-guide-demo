@@ -434,7 +434,7 @@
 }
 
 .list-item:hover {
-  background: var(--color-control-bg-secondary);
+  background: var(--color-nav-hover-bg);
 }
 
 .list-item.is-active {
@@ -473,7 +473,7 @@
 }
 
 .dropdown-item:hover {
-  background: var(--color-control-bg-secondary);
+  background: var(--color-nav-hover-bg);
 }
 
 .dropdown-divider {

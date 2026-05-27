@@ -17,10 +17,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body:has(.sg-layout) {
-  background: var(--color-surface-sunken);
-}
-
 h1, h2, h3, h4, p {
   margin-top: 0;
 }
