@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Error Handling</h1>
+      <p class="sg-lead">
+        Error handling is a UI feedback pattern for communicating problems and recovery paths. Messages should be
+        specific, helpful, and concise.
+      </p>
+
+      <h2>Feedback types</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inline validation</td>
+            <td>On blur or while typing; field-level message below control</td>
+          </tr>
+          <tr>
+            <td>Alert banner</td>
+            <td>Form-level or action failure; blocked operations</td>
+          </tr>
+          <tr>
+            <td>Toast / snackbar</td>
+            <td>Transient confirmation or low-priority notice</td>
+          </tr>
+          <tr>
+            <td>Loading</td>
+            <td>Spinner or skeleton while async work runs</td>
+          </tr>
+          <tr>
+            <td>Success</td>
+            <td>Completed actions with optional next steps</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Inline validation</h2>
+      <div class="sg-preview">
+        <div class="form-group" style="max-width: 320px">
+          <label class="label" for="eh-email">Email</label>
+          <input class="input is-invalid" id="eh-email" type="email" value="bad@" aria-describedby="eh-email-err" />
+          <div class="field-error" id="eh-email-err">Enter a valid email address.</div>
+        </div>
+      </div>
+
+      <h2>Alert variants</h2>
+      <div class="sg-preview">
+        <div class="alert alert-error" role="alert">
+          Unable to save file. Check that the output folder exists and you have write permission.
+        </div>
+        <div class="alert alert-success sg-stack-sm" role="status">
+          Image exported successfully to C:\Exports\sample.tif
+        </div>
+        <div class="alert alert-warning sg-stack-sm" role="status">
+          Large file size may slow export. Consider reducing resolution.
+        </div>
+        <div class="alert alert-info sg-stack-sm" role="status">
+          Analysis will continue in the background. You can close this panel.
+        </div>
+      </div>
+
+      <h2>Toast and loading</h2>
+      <div class="sg-preview sg-preview--grid">
+        <div class="toast-demo" role="status">File saved</div>
+        <div class="loading-demo">
+          <span class="loading-spinner" aria-hidden="true"></span>
+          Processing…
+        </div>
+      </div>
+
+      <h2>Message guidelines</h2>
+      <ul>
+        <li><strong>Specific</strong> — explain exactly what went wrong.</li>
+        <li><strong>Helpful</strong> — provide guidance on how to fix the issue.</li>
+        <li><strong>Concise</strong> — keep messages brief but informative.</li>
+        <li>Combine color, icons, and text — do not rely on color alone.</li>
+        <li>Offer retry, alternative paths, or support when recovery is possible.</li>
+      </ul>
+
+      <h2>When to show errors</h2>
+      <ul>
+        <li>Immediate — inline validation as user completes fields</li>
+        <li>On submit — form-level summary if submission fails</li>
+        <li>On action failure — save, export, delete blocked</li>
+        <li>On load failure — missing resource or network error</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('error-handling');
+    </script>
+  </body>
+</html>

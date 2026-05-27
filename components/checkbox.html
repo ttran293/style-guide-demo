@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkboxes · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Checkboxes</h1>
+      <p class="sg-lead">
+        Checkboxes and radio buttons are UI controls for selecting options. Choose the control based on whether
+        selections are mutually exclusive.
+      </p>
+
+      <h2>When to use</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Control</th>
+            <th>Use when</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Checkbox</td>
+            <td>Multiple independent options; not mutually exclusive</td>
+            <td>Select layers to export, toggle features on/off</td>
+          </tr>
+          <tr>
+            <td>Radio</td>
+            <td>Exactly one option from a set; mutually exclusive</td>
+            <td>Choose output format, select measurement unit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Menu contexts</h2>
+      <p>In exclusive menus without icons, use radio behavior; in non-exclusive menus without icons, use checkboxes. With icons, highlightable state buttons may replace both.</p>
+
+      <h2>Design guidelines</h2>
+      <ul>
+        <li>Standard checkbox and radio appearance; visually distinct from each other.</li>
+        <li>Labels per Typography and Capitalization foundations; spacing per Spacing foundation.</li>
+        <li>Clear default, hover, active, disabled, and focus states with sufficient contrast.</li>
+        <li>Support indeterminate checkbox state when a group is partially selected.</li>
+      </ul>
+
+      <h2>Examples</h2>
+      <div class="sg-preview">
+        <fieldset style="border: none; padding: 0; margin: 0 0 var(--space-4)">
+          <legend class="label" style="margin-bottom: var(--space-2)">Export layers</legend>
+          <label class="check">
+            <input type="checkbox" checked />
+            Metadata
+          </label>
+          <label class="check">
+            <input type="checkbox" />
+            Annotations
+          </label>
+          <label class="check">
+            <input type="checkbox" />
+            Scale bar
+          </label>
+        </fieldset>
+        <fieldset style="border: none; padding: 0; margin: 0">
+          <legend class="label" style="margin-bottom: var(--space-2)">Output format</legend>
+          <label class="radio">
+            <input type="radio" name="fmt" checked />
+            TIFF
+          </label>
+          <label class="radio">
+            <input type="radio" name="fmt" />
+            JPEG
+          </label>
+          <label class="radio">
+            <input type="radio" name="fmt" />
+            PNG
+          </label>
+        </fieldset>
+      </div>
+
+      <h2>Interaction and accessibility</h2>
+      <ul>
+        <li>Entire label area is clickable; support keyboard (Tab, Space/Enter).</li>
+        <li>Group related options with fieldset and legend.</li>
+        <li>Disable checkbox and radio labels together with the control when unavailable.</li>
+        <li>Provide ARIA roles and labels; use fieldset/legend for related groups.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('checkbox');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialogs · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Dialogs</h1>
+      <p class="sg-lead">
+        A dialog is a modal UI surface that focuses user attention on a task or decision. Titles use sentence case;
+        allow one primary action per dialog.
+      </p>
+
+      <h2>Modal vs modeless</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Behavior</th>
+            <th>Use when</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modal</td>
+            <td>Blocks rest of app until dismissed</td>
+            <td>Confirmations, irreversible actions, critical info that must be addressed</td>
+          </tr>
+          <tr>
+            <td>Modeless</td>
+            <td>User can interact elsewhere</td>
+            <td>Tools or settings that adjust another active feature with immediate visible effect</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Use modals sparingly — they are interruptive. Low/medium priority info belongs in a snackbar or toast instead.</p>
+
+      <h2>Anatomy</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Container</td>
+            <td>Raised surface above other UI</td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td>Brief, clear statement — avoid “Are you sure?” or alarmist copy</td>
+          </tr>
+          <tr>
+            <td>Body</td>
+            <td>Concise context and consequences; do not repeat the title</td>
+          </tr>
+          <tr>
+            <td>Divider</td>
+            <td>Optional separator between header and body</td>
+          </tr>
+          <tr>
+            <td>Actions</td>
+            <td>Max two actions recommended; one primary only</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Button placement</h2>
+      <p>Primary action on the <strong>right</strong>, secondary on the left (Z-pattern reading). User reviews cancel/dismiss before committing to the primary action. Labels should be outcome verbs: Delete, Save, Continue — not vague Yes/Submit.</p>
+      <ul>
+        <li><strong>Single action:</strong> acknowledgment only (OK, Got it, Close)</li>
+        <li><strong>Two actions:</strong> confirming (primary) + dismissing (secondary)</li>
+      </ul>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <div class="dialog-demo">
+          <div class="dialog">
+            <div class="dialog-header">Capture settings</div>
+            <div class="dialog-body">
+              <div class="form-group">
+                <label class="label" for="dlg-exposure">Exposure time (ms)</label>
+                <input class="input" id="dlg-exposure" type="number" value="100" />
+              </div>
+              <p class="sg-muted" style="margin: 0">Changes apply to the next capture only.</p>
+            </div>
+            <div class="dialog-footer">
+              <button type="button" class="btn btn-secondary">Cancel</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Primary button is a verb — Apply, Save, Delete.</li>
+        <li>Escape dismisses modal overlays; trap focus inside the dialog.</li>
+        <li>Use low-contrast divider between header and body, not full enclosing borders.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('dialog');
+    </script>
+  </body>
+</html>

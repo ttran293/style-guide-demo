@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyperlinks · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Hyperlinks</h1>
+      <p class="sg-lead">
+        A hyperlink is a UI element that navigates the user to another location — within the same page, another view
+        inside the product, or an external resource. Navigation = link; action = button.
+      </p>
+
+      <h2>Purpose and when to use</h2>
+      <p>Use a hyperlink when the interaction:</p>
+      <ul>
+        <li>Navigates to another page, view, document, or external resource</li>
+        <li>Opens contextual help or reference content</li>
+        <li>Moves the user within the same page (anchor link)</li>
+      </ul>
+      <p>Do <strong>not</strong> use links for primary actions, destructive actions, form submission, or state changes.</p>
+
+      <h2>Link variants</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inline</td>
+            <td>Inside body text — underlined by default, same font size as body</td>
+          </tr>
+          <tr>
+            <td>Standalone</td>
+            <td>Cards, panels, lists — underline optional; clear hover state required</td>
+          </tr>
+          <tr>
+            <td>Internal</td>
+            <td>Navigation within the system (→ suffix)</td>
+          </tr>
+          <tr>
+            <td>External</td>
+            <td>Leaves the product (↗ suffix)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Link color</h2>
+      <p>Link color must meet WCAG 2.1 AA contrast (≥ 4.5:1), be distinguishable from body text, not rely on color alone, and stay consistent across the system. Users scan for <strong>blue, underlined text</strong> as a learned convention — if brand color is not blue, underline remains mandatory for inline links.</p>
+      <ul>
+        <li>Underline text by default; hide underline on mouse-over</li>
+        <li>Adapt link colors for light and dark themes (see Color foundation)</li>
+        <li><strong>Visited links:</strong> recommended on public web content; optional in desktop apps; must maintain contrast — avoid low-contrast purple defaults</li>
+      </ul>
+
+      <h2>Examples</h2>
+      <div class="sg-preview">
+        <p>
+          See the
+          <a href="#" class="link">API documentation</a>
+          for integration details.
+        </p>
+        <p class="sg-stack-sm">
+          <a href="#" class="link link-standalone">Download sample dataset</a>
+        </p>
+        <p class="sg-stack-sm">
+          <a href="#" class="link link-internal">Capture settings</a>
+          &nbsp;·&nbsp;
+          <a href="#" class="link link-external">Company website</a>
+        </p>
+      </div>
+
+      <h2>Dropdown menus with links</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Icon</th>
+            <th>Meaning</th>
+            <th>Use when</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>→</td>
+            <td>Move within the system</td>
+            <td>Another page, deeper nav level, settings panel — not for delete, toggle, or modal actions</td>
+          </tr>
+          <tr>
+            <td>↗</td>
+            <td>Leave the system</td>
+            <td>External website, system browser, new tab — not for internal routing or nested menus</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>In structured menus: underline is not required; hover highlight must indicate interaction; pointer cursor and adequate touch targets on web.</p>
+
+      <h2>Content and copy rules</h2>
+      <ul>
+        <li>Use descriptive labels (2–5 words ideal); link meaningful phrases only</li>
+        <li>Avoid “click here”, “more”, or “read more”</li>
+        <li>Avoid adjacent competing links</li>
+      </ul>
+      <p><strong>Correct:</strong> <em>Download the API documentation</em> (linked phrase only)</p>
+      <p><strong>Incorrect:</strong> <em>Click here</em> to download the API documentation</p>
+
+      <h2>Anti-patterns</h2>
+      <ul>
+        <li>Links styled like plain text</li>
+        <li>Removing underline in body content</li>
+        <li>Using links as primary CTA</li>
+        <li>Linking entire paragraphs</li>
+        <li>Underlining non-clickable text</li>
+        <li>Multiple link colors across the system</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('hyperlink');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Button</h1>
+      <p class="sg-lead">
+        A button is a UI control that triggers an instantaneous action. It is distinct from state buttons, which toggle
+        persistent state. Allow one primary action per panel; primary labels should be verbs.
+      </p>
+
+      <h2>Variants</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td>Main panel action — Launch, Apply, Add; may close panel or start long processing</td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>Subsection actions; shorter height; may open settings dialogs</td>
+          </tr>
+          <tr>
+            <td>Tertiary</td>
+            <td>Adjacent to a related control — Browse, Reset</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Color tokens</h2>
+      <p class="sg-muted">
+        Button colors match the palette on the <a href="/foundations/color.html">Color</a> foundation page. Values below
+        are fixed hex references; live buttons use CSS custom properties that adapt with theme.
+      </p>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Background (light / dark)</th>
+            <th>Text (light / dark)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                  <span class="sg-type-meta">#2967c4</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #395386"></span>
+                  <span class="sg-type-meta">#395386</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #2967c4">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #395386">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Primary hover</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #2358a7"></span>
+                  <span class="sg-type-meta">#2358a7</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                  <span class="sg-type-meta">#2967c4</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #2358a7">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #2967c4">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #f1f1f1"></span>
+                  <span class="sg-type-meta">#f1f1f1</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #474747"></span>
+                  <span class="sg-type-meta">#474747</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #000000; background: #f1f1f1">Aa</span>
+                  <span class="sg-type-meta">#000000</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #474747">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Secondary hover</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #e6e6e6"></span>
+                  <span class="sg-type-meta">#e6e6e6</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                  <span class="sg-type-meta">#525252</span>
+                </div>
+              </div>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Tertiary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #000000; background: #ffffff">Aa</span>
+                  <span class="sg-type-meta">#000000</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #1c2127">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Disabled</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #f1f1f1"></span>
+                  <span class="sg-type-meta">#f1f1f1</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #474747"></span>
+                  <span class="sg-type-meta">#474747</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #a0a0a0; background: #f1f1f1">Aa</span>
+                  <span class="sg-type-meta">#a0a0a0</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #525252; background: #474747">Aa</span>
+                  <span class="sg-type-meta">#525252</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>State matrix</h2>
+      <p class="sg-muted">
+        Each variant is shown in default, hover, focus, and disabled states. Light and dark panels render side by side;
+        use the header theme toggle to preview either mode full-page.
+      </p>
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+          <div class="sg-button-matrix">
+            <div class="sg-button-matrix__label"></div>
+            <div class="sg-button-matrix__label"><strong>Primary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Secondary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Tertiary</strong></div>
+
+            <div class="sg-button-matrix__label">Default</div>
+            <button type="button" class="btn btn-primary">Launch</button>
+            <button type="button" class="btn btn-secondary">Settings</button>
+            <button type="button" class="btn btn-tertiary">Browse</button>
+
+            <div class="sg-button-matrix__label">Hover</div>
+            <button type="button" class="btn btn-primary is-hovered">Launch</button>
+            <button type="button" class="btn btn-secondary is-hovered">Settings</button>
+            <button type="button" class="btn btn-tertiary is-hovered">Browse</button>
+
+            <div class="sg-button-matrix__label">Focus</div>
+            <button type="button" class="btn btn-primary is-focused">Launch</button>
+            <button type="button" class="btn btn-secondary is-focused">Settings</button>
+            <button type="button" class="btn btn-tertiary is-focused">Browse</button>
+
+            <div class="sg-button-matrix__label">Disabled</div>
+            <button type="button" class="btn btn-primary" disabled>Launch</button>
+            <button type="button" class="btn btn-secondary" disabled>Settings</button>
+            <button type="button" class="btn btn-tertiary" disabled>Browse</button>
+          </div>
+        </div>
+
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+          <div class="sg-button-matrix">
+            <div class="sg-button-matrix__label"></div>
+            <div class="sg-button-matrix__label"><strong>Primary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Secondary</strong></div>
+            <div class="sg-button-matrix__label"><strong>Tertiary</strong></div>
+
+            <div class="sg-button-matrix__label">Default</div>
+            <button type="button" class="btn btn-primary">Launch</button>
+            <button type="button" class="btn btn-secondary">Settings</button>
+            <button type="button" class="btn btn-tertiary">Browse</button>
+
+            <div class="sg-button-matrix__label">Hover</div>
+            <button type="button" class="btn btn-primary is-hovered">Launch</button>
+            <button type="button" class="btn btn-secondary is-hovered">Settings</button>
+            <button type="button" class="btn btn-tertiary is-hovered">Browse</button>
+
+            <div class="sg-button-matrix__label">Focus</div>
+            <button type="button" class="btn btn-primary is-focused">Launch</button>
+            <button type="button" class="btn btn-secondary is-focused">Settings</button>
+            <button type="button" class="btn btn-tertiary is-focused">Browse</button>
+
+            <div class="sg-button-matrix__label">Disabled</div>
+            <button type="button" class="btn btn-primary" disabled>Launch</button>
+            <button type="button" class="btn btn-secondary" disabled>Settings</button>
+            <button type="button" class="btn btn-tertiary" disabled>Browse</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>State reference</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Primary</th>
+            <th>Secondary / tertiary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>Brand background, white label</td>
+            <td>Secondary fill or transparent (tertiary); theme text color</td>
+          </tr>
+          <tr>
+            <td>Hover</td>
+            <td>Darker blue (light) / lighter blue (dark)</td>
+            <td>Secondary hover fill; tertiary gains hover fill</td>
+          </tr>
+          <tr>
+            <td>Focus</td>
+            <td>2px primary outline, 2px offset</td>
+            <td>Same focus ring on all variants</td>
+          </tr>
+          <tr>
+            <td>Disabled</td>
+            <td>Neutral gray fill and muted label</td>
+            <td>Muted label; tertiary stays transparent</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Appearance</h2>
+      <ul>
+        <li>Button height ≈ 2% of vertical monitor resolution (~20–35px at 1080p, ~40–60px at 4K).</li>
+        <li>Primary: brand blue background, white text; disabled uses neutral gray background.</li>
+        <li>Secondary/tertiary: neutral background, dark text; disabled text muted.</li>
+        <li>Include text when space permits; icon-only for standard actions (Browse, Save) when space is limited.</li>
+        <li>Icons + text when the button may collapse to icon-only or the icon needs definition.</li>
+      </ul>
+
+      <h2>Usage guidelines</h2>
+      <ul>
+        <li>Only <strong>one primary button</strong> per panel.</li>
+        <li>Primary button text should be a <strong>verb</strong>; prefer text-only on primary buttons.</li>
+        <li>Secondary buttons align with other controls in a subsection.</li>
+        <li>Tertiary buttons sit beside their related control (e.g. filename + Browse).</li>
+        <li>Help links use hyperlink appearance, not button styling.</li>
+      </ul>
+
+      <p class="sg-muted">
+        Platform-specific button catalogs for desktop, web, and portal products are deferred from this unified spec — report back if those
+        should be merged later.
+      </p>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('button');
+    </script>
+  </body>
+</html>

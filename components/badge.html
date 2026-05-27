@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Badge</h1>
+      <p class="sg-lead">
+        A badge is a small UI indicator for numbers, statuses, and labels on other components.
+      </p>
+
+      <h2>Use and purpose</h2>
+      <ul>
+        <li><strong>Visual cues</strong> — unread counts, cart items</li>
+        <li><strong>Status indicators</strong> — New, On Sale, Beta</li>
+        <li><strong>Notifications</strong> — new updates or events</li>
+        <li><strong>Counters</strong> — pending tasks, new list items</li>
+        <li><strong>Menu items</strong> — highlight sections with new or updated content</li>
+      </ul>
+
+      <h2>Variants</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td>Default status or count</td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>Neutral or de-emphasized label</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="sg-preview">
+        <span class="badge">New</span>
+        <span class="badge">3</span>
+        <span class="badge badge-secondary">Beta</span>
+        <span class="badge badge-secondary">Draft</span>
+      </div>
+
+      <h2>Accessibility</h2>
+      <p>Screen readers may read badge text as random extra words if not paired with meaningful context. Do not rely on badge styling alone — ensure the parent control or label conveys the full meaning.</p>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('badge');
+    </script>
+  </body>
+</html>

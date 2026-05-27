@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Navbar</h1>
+      <p class="sg-lead">
+        A navbar is the top navigation bar that provides global wayfinding, user and account controls, and search
+        entry. It should remain consistent and compact across Company web products.
+      </p>
+
+      <h2>Anatomy (left → right)</h2>
+      <ol>
+        <li>Brand (logo)</li>
+        <li>Primary sections: Home, Workspace, My Files, Projects, All Users Files, Activity</li>
+        <li>Global search (leading icon)</li>
+        <li>System actions: Notifications, Settings</li>
+        <li>User menu (avatar)</li>
+        <li>Window controls (minimize, restore, close) — desktop wrapper only, not in web</li>
+      </ol>
+
+      <h2>Layout and spacing</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Navbar height</td>
+            <td>56px (desktop wrapper and tablet)</td>
+          </tr>
+          <tr>
+            <td>Horizontal padding</td>
+            <td>16px at ≤1440px; 24px beyond</td>
+          </tr>
+          <tr>
+            <td>Item spacing</td>
+            <td>1.5rem between items; 0.25rem icon–label gap</td>
+          </tr>
+          <tr>
+            <td>Logo max height</td>
+            <td>28px</td>
+          </tr>
+          <tr>
+            <td>Search input width</td>
+            <td>250–350px default, expands on focus</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="sg-muted"><strong>Conflict noted:</strong> older specs list 350px in Layout and 250px in Search — reconcile when implementing in product.</p>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <nav class="navbar-demo" aria-label="Example navbar">
+          <span class="navbar-brand">Company</span>
+          <div class="navbar-items">
+            <a href="#" class="navbar-item is-active">Home</a>
+            <a href="#" class="navbar-item">Workspace</a>
+            <a href="#" class="navbar-item">Projects</a>
+          </div>
+          <input class="navbar-search" type="search" placeholder="Search" aria-label="Search" />
+        </nav>
+      </div>
+
+      <h2>States</h2>
+      <ul>
+        <li><strong>Default:</strong> secondary text color</li>
+        <li><strong>Hover:</strong> background tint, pointer cursor</li>
+        <li><strong>Active/current:</strong> underlined primary section</li>
+      </ul>
+
+      <h2>Responsive behavior</h2>
+      <ul>
+        <li><strong>≥1024px:</strong> full labels, expanded search</li>
+        <li><strong>&lt;1024px:</strong> icons only for menu items</li>
+      </ul>
+
+      <h2>Interactions and content</h2>
+      <ul>
+        <li>Dropdowns: click to open; Escape or click outside closes.</li>
+        <li>Short labels (1–2 words), nouns not verbs; avoid obscure abbreviations.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('navbar');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevation · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Elevation</h1>
+      <p class="sg-lead">
+        Elevation is a visual layering system that uses surface color and shadow to communicate depth. Four levels plus
+        overflow are defined in the token system.
+      </p>
+
+      <h2>Levels</h2>
+      <div class="sg-preview elevation-preview-bg">
+        <div class="sg-elevation-card elevation-sunken">
+          <strong>Sunken</strong> — lowest level; backdrop or well for grouped content (e.g. kanban columns).
+        </div>
+        <div class="sg-elevation-card elevation-default">
+          <strong>Default</strong> — baseline flat surface; workspace background, title bar.
+        </div>
+        <div class="sg-elevation-card elevation-raised">
+          <strong>Raised</strong> — cards and movable panels; subtle lift above default.
+        </div>
+        <div class="sg-elevation-card elevation-overlay">
+          <strong>Overlay</strong> — modals, dialogs, dropdowns, floating toolbars.
+        </div>
+        <div class="sg-elevation-card elevation-overflow">
+          <strong>Overflow</strong> — scroll shadow indicating content extends beyond the viewport.
+        </div>
+      </div>
+
+      <h2>Surface mapping</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>UI element</th>
+            <th>Elevation level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Workspace / title bar</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Panel sub-headers, separator bars</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Panel, ribbon, document background</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Dialogs</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('elevation');
+    </script>
+  </body>
+</html>

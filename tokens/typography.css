@@ -1,0 +1,31 @@
+/**
+ * Company Style Guide — Typography tokens
+ * Font: Open Sans · Root: 15px
+ */
+
+:root {
+  --font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-family-mono: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.625;
+
+  --text-smallest: 0.6875rem;  /* 10.31px */
+  --text-fine: 0.75rem;        /* 11.25px */
+  --text-xs: 0.8125rem;        /* 12.19px */
+  --text-sm: 0.875rem;         /* 13.125px */
+  --text-base: 1rem;           /* 15px */
+  --text-md: 1.125rem;         /* 16.875px */
+  --text-lg: 1.25rem;          /* 18.75px */
+  --text-xl: 1.5rem;           /* 22.5px */
+  --text-2xl: 1.875rem;        /* 28.125px */
+  --text-3xl: 2.25rem;         /* 33.75px */
+}
+
+html {
+  font-size: 15px;
+}

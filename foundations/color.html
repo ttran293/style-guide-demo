@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Color</h1>
+      <p class="sg-lead">
+        Color is a design foundation that expresses style, meaning, and hierarchy. A standardized palette and
+        intentional application ensure a familiar, consistent experience across light and dark themes.
+      </p>
+
+      <h2>Desktop application</h2>
+      <p class="sg-muted">
+        Company desktop products derive default control colors from a base scheme color. Individual components may override these
+        values for a customized scheme.
+      </p>
+
+      <h3>Brand</h3>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Light</th>
+            <th>Dark</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                <span class="sg-type-meta">#2967c4</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #395386"></span>
+                <span class="sg-type-meta">#395386</span>
+              </span>
+            </td>
+            <td>Primary buttons, badges, active control borders</td>
+          </tr>
+          <tr>
+            <td>Primary hover</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2358a7"></span>
+                <span class="sg-type-meta">#2358a7</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                <span class="sg-type-meta">#2967c4</span>
+              </span>
+            </td>
+            <td>Primary button hover, link hover (light)</td>
+          </tr>
+          <tr>
+            <td>Primary text</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>Text on primary-colored surfaces</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Elevations</h3>
+      <p>
+        Background colors indicate depth and layering. Toggle the theme control in the header to compare light and dark
+        swatches.
+      </p>
+      <div class="sg-preview sg-preview--grid">
+        <div style="text-align: center">
+          <div class="sg-swatch sg-swatch-lg sg-swatch-surface-sunken"></div>
+          <div class="sg-type-meta">Sunken</div>
+        </div>
+        <div style="text-align: center">
+          <div class="sg-swatch sg-swatch-lg sg-swatch-surface-0"></div>
+          <div class="sg-type-meta">Level 0</div>
+        </div>
+        <div style="text-align: center">
+          <div class="sg-swatch sg-swatch-lg sg-swatch-surface-1"></div>
+          <div class="sg-type-meta">Level 1</div>
+        </div>
+        <div style="text-align: center">
+          <div class="sg-swatch sg-swatch-lg sg-swatch-surface-2"></div>
+          <div class="sg-type-meta">Level 2</div>
+        </div>
+        <div style="text-align: center">
+          <div class="sg-swatch sg-swatch-lg sg-swatch-surface-3"></div>
+          <div class="sg-type-meta">Level 3</div>
+        </div>
+      </div>
+
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>UI element</th>
+            <th>Level</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Base scheme color</td>
+            <td>—</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Main form title bar, workspace background</td>
+            <td>0</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #eaeaea"></span>
+                <span class="sg-type-meta">#eaeaea</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Panel sub-headers, separator bars</td>
+            <td>1</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #eaeaea"></span>
+                <span class="sg-type-meta">#eaeaea</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2c333b"></span>
+                <span class="sg-type-meta">#2c333b</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Document background</td>
+            <td>2</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2c333b"></span>
+                <span class="sg-type-meta">#2c333b</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Panel, ribbon</td>
+            <td>2</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Dialogs</td>
+            <td>3</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Text</h3>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Preview</th>
+            <th>Role</th>
+            <th>Light</th>
+            <th>Dark</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sg-text-primary">Aa</span></td>
+            <td>Primary</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #000000"></span>
+                <span class="sg-type-meta">#000000</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>Body text, labels, headings</td>
+          </tr>
+          <tr>
+            <td><span class="sg-text-secondary">Aa</span></td>
+            <td>Secondary</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #6c757d"></span>
+                <span class="sg-type-meta">#6c757d</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #b2b9bf"></span>
+                <span class="sg-type-meta">#b2b9bf</span>
+              </span>
+            </td>
+            <td>Captions, helper text, metadata</td>
+          </tr>
+          <tr>
+            <td><span class="sg-text-disabled">Aa</span></td>
+            <td>Disabled</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #a0a0a0"></span>
+                <span class="sg-type-meta">#a0a0a0</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                <span class="sg-type-meta">#525252</span>
+              </span>
+            </td>
+            <td>Disabled controls, inactive labels</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Links</h3>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Preview</th>
+            <th>State</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sg-text-link">Hyperlink</span></td>
+            <td>Default</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                <span class="sg-type-meta">#2967c4</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #6ea8fe"></span>
+                <span class="sg-type-meta">#6ea8fe</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-text-link" style="color: var(--color-link-hover)">Hyperlink</span></td>
+            <td>Hover</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2358a7"></span>
+                <span class="sg-type-meta">#2358a7</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #9ec5fe"></span>
+                <span class="sg-type-meta">#9ec5fe</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-text-link" style="color: var(--color-link-visited)">Hyperlink</span></td>
+            <td>Visited</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #551a8b"></span>
+                <span class="sg-type-meta">#551a8b</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #b794f4"></span>
+                <span class="sg-type-meta">#b794f4</span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Input controls</h3>
+      <p>Fill and border colors for enabled and disabled form controls.</p>
+      <div class="sg-preview">
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap">
+          <div class="sg-demo-enabled-input">Enabled control</div>
+          <div class="sg-demo-disabled-input">Disabled control</div>
+        </div>
+      </div>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Preview</th>
+            <th>Role</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="sg-swatch sg-swatch-surface-2"></span></td>
+            <td>Control fill</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-swatch sg-swatch-control-border"></span></td>
+            <td>Border</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #c8c8c8"></span>
+                <span class="sg-type-meta">#c8c8c8</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                <span class="sg-type-meta">#525252</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-swatch sg-swatch-primary"></span></td>
+            <td>Active border</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                <span class="sg-type-meta">#2967c4</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #395386"></span>
+                <span class="sg-type-meta">#395386</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-swatch sg-swatch-control-disabled"></span></td>
+            <td>Disabled fill</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #f1f1f1"></span>
+                <span class="sg-type-meta">#f1f1f1</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #474747"></span>
+                <span class="sg-type-meta">#474747</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="sg-text-disabled">Aa</span></td>
+            <td>Disabled text</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #a0a0a0"></span>
+                <span class="sg-type-meta">#a0a0a0</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                <span class="sg-type-meta">#525252</span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Buttons</h3>
+      <p>
+        Primary, secondary, and tertiary button colors are defined in the palette. See
+        <a href="/components/button.html">Button</a> for the full state matrix and usage guidelines.
+      </p>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Background (light / dark)</th>
+            <th>Text (light / dark)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #2967c4"></span>
+                  <span class="sg-type-meta">#2967c4</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #395386"></span>
+                  <span class="sg-type-meta">#395386</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #2967c4">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #395386">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #f1f1f1"></span>
+                  <span class="sg-type-meta">#f1f1f1</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #474747"></span>
+                  <span class="sg-type-meta">#474747</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #000000; background: #f1f1f1">Aa</span>
+                  <span class="sg-type-meta">#000000</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #474747">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Secondary hover</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #e6e6e6"></span>
+                  <span class="sg-type-meta">#e6e6e6</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                  <span class="sg-type-meta">#525252</span>
+                </div>
+              </div>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Tertiary</td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-swatch sg-swatch-fixed sg-swatch-transparent"></span>
+                  <span class="sg-type-meta">transparent</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="sg-color-pair">
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #000000; background: #ffffff">Aa</span>
+                  <span class="sg-type-meta">#000000</span>
+                </div>
+                <div class="sg-color-pair__item">
+                  <span class="sg-text-swatch" style="color: #ffffff; background: #1c2127">Aa</span>
+                  <span class="sg-type-meta">#ffffff</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Web application</h2>
+      <p>
+        Company web surfaces use the same palette. Contrast pairings for text on backgrounds are validated for both light
+        and dark modes.
+      </p>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Surface</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Page background</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffffff"></span>
+                <span class="sg-type-meta">#ffffff</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #1c2127"></span>
+                <span class="sg-type-meta">#1c2127</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Sidebar</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #f8f9fa"></span>
+                <span class="sg-type-meta">#f8f9fa</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #141820"></span>
+                <span class="sg-type-meta">#141820</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Code blocks</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #f1f3f5"></span>
+                <span class="sg-type-meta">#f1f3f5</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #2c333b"></span>
+                <span class="sg-type-meta">#2c333b</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Border</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #c8c8c8"></span>
+                <span class="sg-type-meta">#c8c8c8</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #525252"></span>
+                <span class="sg-type-meta">#525252</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Divider</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: rgba(204, 204, 204, 0.5)"></span>
+                <span class="sg-type-meta">rgba(204, 204, 204, 0.5)</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: rgba(82, 82, 82, 0.8)"></span>
+                <span class="sg-type-meta">rgba(82, 82, 82, 0.8)</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Warning</td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #e6a700"></span>
+                <span class="sg-type-meta">#e6a700</span>
+              </span>
+            </td>
+            <td>
+              <span class="sg-hex-cell">
+                <span class="sg-swatch sg-swatch-fixed" style="background: #ffc107"></span>
+                <span class="sg-type-meta">#ffc107</span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('color');
+    </script>
+  </body>
+</html>

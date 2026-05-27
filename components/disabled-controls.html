@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disabled Controls · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Disabled Controls</h1>
+      <p class="sg-lead">
+        Disabled controls are UI elements that cannot be interacted with at the panel, subsection, or individual level.
+        Users must always know why something is disabled and how to enable it.
+      </p>
+
+      <h2>General principles</h2>
+      <ul>
+        <li><strong>Clarity</strong> — explain why and how to enable.</li>
+        <li><strong>Consistency</strong> — same visual cues throughout the app.</li>
+        <li><strong>Accessibility</strong> — disabled states perceivable; tooltips reachable by keyboard.</li>
+      </ul>
+
+      <h2>Label rules for individual controls</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Control type</th>
+            <th>Label when disabled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Checkbox / radio</td>
+            <td>Disable label text along with the control</td>
+          </tr>
+          <tr>
+            <td>Text box, combo box, updown</td>
+            <td>Leave the label enabled</td>
+          </tr>
+          <tr>
+            <td>Standalone informative label</td>
+            <td>Generally remain enabled unless misleading in context</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Fully disabled panel</h2>
+      <p>Panel header stays enabled. Show warning icon + brief message (1–2 words) right-justified with 6px buffer from controls. Tooltip on icon explains why and how to enable. All control tooltips in the panel may share the same explanation.</p>
+      <div class="sg-preview">
+        <div class="panel is-disabled">
+          <div class="panel-header">
+            Export settings
+            <span class="panel-warning" title="No image is loaded. Open an image to enable export settings.">⚠ No image</span>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label class="label is-disabled" for="dc-format">Output format</label>
+              <select class="select" id="dc-format" disabled>
+                <option>TIFF</option>
+              </select>
+            </div>
+            <label class="check is-disabled">
+              <input type="checkbox" disabled />
+              Include metadata
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <h2>Disabled subsection</h2>
+      <p>Subsection header remains enabled; all controls and labels inside the subsection are disabled. Same warning icon + tooltip pattern as a fully disabled panel.</p>
+      <div class="sg-preview">
+        <div class="panel">
+          <div class="panel-header">Capture settings</div>
+          <div class="panel-body">
+            <div class="panel-subsection is-disabled">
+              <div class="panel-subsection-header">
+                Auto exposure
+                <span class="panel-warning" title="Connect a camera to configure auto exposure.">⚠ No camera</span>
+              </div>
+              <div class="form-group">
+                <label class="label is-disabled" for="dc-exp">Target brightness</label>
+                <input class="input" id="dc-exp" type="number" disabled value="128" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Individual disabled controls</h2>
+      <div class="sg-preview">
+        <div class="form-group">
+          <label class="label" for="dc-path">Output path</label>
+          <input class="input" id="dc-path" type="text" value="C:\Exports\" disabled title="Note: Select a project before changing the output path." />
+        </div>
+        <label class="check is-disabled">
+          <input type="checkbox" disabled checked />
+          Compress output
+        </label>
+      </div>
+      <p class="sg-muted">For individual controls, append a <strong>Note:</strong> line to the tooltip explaining why the control is disabled.</p>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Sufficient contrast for disabled controls and labels.</li>
+        <li>Tooltips accessible via keyboard and screen readers.</li>
+        <li>Explanatory text remains readable; do not treat documentation labels as interactive controls.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('disabled-controls');
+    </script>
+  </body>
+</html>

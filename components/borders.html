@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borders · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Borders</h1>
+      <p class="sg-lead">
+        Borders are UI styling elements that provide visual separation and hierarchy. Use them sparingly — prefer
+        whitespace and dividing lines where possible.
+      </p>
+
+      <h2>General principles</h2>
+      <ul>
+        <li>Use sparingly; prefer spacing and low-contrast dividers.</li>
+        <li>Avoid full borders around adjacent controls unless necessary.</li>
+        <li>Consistent color, width, and radius app-wide.</li>
+        <li>Indicate interactivity and selection with border emphasis, not color alone.</li>
+      </ul>
+
+      <h2>Usage by control type</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Control</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Panels and sections</td>
+            <td>Low-contrast horizontal dividers; no full borders on adjacent headers/menus</td>
+          </tr>
+          <tr>
+            <td>Ribbon groups</td>
+            <td>Low-contrast horizontal lines between groups; consistent margin/padding</td>
+          </tr>
+          <tr>
+            <td>Buttons</td>
+            <td>Borders for focus/active/primary; spacing over borders between adjacent buttons</td>
+          </tr>
+          <tr>
+            <td>Menus and pop-ups</td>
+            <td>Border defines menu boundary; dividers inside; avoid nested bordered elements</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Border styles</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Style</th>
+            <th>Width</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subtle</td>
+            <td>1px</td>
+            <td>Section dividers, low-contrast separation</td>
+          </tr>
+          <tr>
+            <td>Control</td>
+            <td>1px</td>
+            <td>Input and control boundaries</td>
+          </tr>
+          <tr>
+            <td>Emphasis</td>
+            <td>2px</td>
+            <td>Primary action, focus, selection</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="sg-preview sg-preview--grid">
+        <div class="border-demo border-subtle">Subtle — 1px divider color</div>
+        <div class="border-demo border-control">Control — 1px control border</div>
+        <div class="border-demo border-emphasis">Emphasis — 2px primary</div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Standard width is <strong>1px</strong>; use <strong>2px</strong> only for emphasis (primary action, focus).</li>
+        <li>Prefer solid lines; dashed or dotted only for draft/temporary states.</li>
+        <li>Corner radius follows Shape foundation (typically 4px on cards/panels).</li>
+        <li>Ensure sufficient contrast for focus and selection borders (WCAG).</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('borders');
+    </script>
+  </body>
+</html>

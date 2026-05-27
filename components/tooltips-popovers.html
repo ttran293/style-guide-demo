@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltips &amp; Popovers · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Tooltips &amp; Popovers</h1>
+      <p class="sg-lead">
+        Tooltips and popovers are overlay UI components for supplementary information. Tooltip = explain; popover =
+        interact. Tooltips are supplementary; popovers support task completion.
+      </p>
+
+      <h2>Tooltips</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trigger</td>
+            <td>Hover (mouse) / focus (keyboard)</td>
+          </tr>
+          <tr>
+            <td>Delay</td>
+            <td>300–500ms before show</td>
+          </tr>
+          <tr>
+            <td>Dismiss</td>
+            <td>Blur or mouse leave</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>1–2 lines plain text; sentence case</td>
+          </tr>
+          <tr>
+            <td>Use when</td>
+            <td>Icon-only controls, terminology, truncated text, non-essential guidance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Popovers</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trigger</td>
+            <td>Click</td>
+          </tr>
+          <tr>
+            <td>Dismiss</td>
+            <td>Outside click or explicit close</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Structured layout; may include buttons, inputs, links</td>
+          </tr>
+          <tr>
+            <td>Use when</td>
+            <td>Inline config, secondary actions, interactive contextual help</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Visual design</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Tooltip</th>
+            <th>Popover</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Size</td>
+            <td>Compact overlay</td>
+            <td>Larger, card-like surface</td>
+          </tr>
+          <tr>
+            <td>Tooltip background (light)</td>
+            <td>Black at 90% opacity, white text</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Tooltip background (dark)</td>
+            <td>#2F343A at 90% opacity, white text</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="sg-preview sg-preview--grid">
+        <div class="tooltip-demo-wrap">
+          <button type="button" class="btn btn-secondary">Save</button>
+          <span class="tooltip-demo" role="tooltip">Save current project</span>
+        </div>
+        <div class="popover-demo">
+          <strong>Export options</strong>
+          <label class="check" style="margin-top: var(--space-2)">
+            <input type="checkbox" checked />
+            Include metadata
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('tooltips-popovers');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalization · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Capitalization</h1>
+      <p class="sg-lead">
+        Capitalization is a writing convention that enhances readability and provides a consistent professional tone.
+        Our system uses <strong>Title Case</strong> and <strong>Sentence case</strong>.
+      </p>
+
+      <h2>Capitalization schemes</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Scheme</th>
+            <th>Definition</th>
+            <th>Usage in UI</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Title Case</strong></td>
+            <td>Capitalize the first letter of every word except articles, coordinating conjunctions, and short prepositions.</td>
+            <td>Proper terms and branded elements</td>
+            <td><em>Company Success Plan</em></td>
+          </tr>
+          <tr>
+            <td><strong>Sentence case</strong></td>
+            <td>Capitalize only the first letter of the first word and any proper nouns.</td>
+            <td>Standard for general terminology and labels</td>
+            <td><em>Numerical aperture</em>, <em>Resize image</em>, <em>New folder</em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Component guidelines</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>UI element</th>
+            <th>Case style</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Labels</td>
+            <td>Sentence case</td>
+            <td><em>Search for files</em>, <em>Enable logging</em></td>
+          </tr>
+          <tr>
+            <td>Buttons</td>
+            <td>Sentence case</td>
+            <td><em>Filter</em>, <em>Sort</em>, <em>Upload</em></td>
+          </tr>
+          <tr>
+            <td>Dialog titles</td>
+            <td>Sentence case</td>
+            <td><em>Resize image</em>, <em>Capture settings</em></td>
+          </tr>
+          <tr>
+            <td>Menu items</td>
+            <td>Sentence case</td>
+            <td><em>Save as</em>, <em>Open recent</em></td>
+          </tr>
+          <tr>
+            <td>Proper terms</td>
+            <td>Title Case</td>
+            <td><em>Company</em>, <em>Segoe UI</em></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="sg-preview">
+        <div class="form-group">
+          <label class="label" for="cap-search">Search for files</label>
+          <input class="input" id="cap-search" type="text" placeholder="Enter filename" />
+        </div>
+        <div class="form-row" style="margin-top: var(--space-4)">
+          <button type="button" class="btn btn-primary">Upload</button>
+          <button type="button" class="btn btn-secondary">Sort</button>
+        </div>
+        <div class="dialog" style="margin-top: var(--space-6); max-width: 320px">
+          <div class="dialog-header">Resize image</div>
+          <div class="dialog-body">
+            <p style="margin: 0; font-size: var(--text-sm)">Adjust dimensions before export.</p>
+          </div>
+          <div class="dialog-footer">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="button" class="btn btn-primary">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Best practices</h2>
+      <ul>
+        <li>Prefer <strong>sentence case</strong> for almost all UI text — easier to read, especially for non-native speakers.</li>
+        <li>Reserve <strong>Title Case</strong> for branding and specific product names.</li>
+        <li>Align with Material Design and Microsoft Fluent content style guidance.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('capitalization');
+    </script>
+  </body>
+</html>

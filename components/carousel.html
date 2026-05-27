@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel (Gallery) View · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Carousel (Gallery) View</h1>
+      <p class="sg-lead">
+        A carousel is a UI layout that presents an image-focused slideshow — one image at a time with navigation
+        controls and an optional thumbnail strip.
+      </p>
+
+      <h2>Anatomy</h2>
+      <ol>
+        <li><strong>Main display</strong> — full-resolution selected image; optional zoom</li>
+        <li><strong>Navigation controls</strong> — left/right arrows; keyboard arrows; swipe on touch</li>
+        <li><strong>Resizable divider</strong> — drag to resize main view vs thumbnail strip</li>
+        <li><strong>Thumbnail strip</strong> (optional) — scrollable previews; active thumbnail highlighted</li>
+      </ol>
+
+      <h2>When to use</h2>
+      <ul>
+        <li>Detailed single-image exploration at high resolution</li>
+        <li>Comparing sequential visuals (microscope scans, product photos, design iterations)</li>
+        <li>Sequential or timeline datasets</li>
+        <li>Limited screen space — single focus, less clutter than grid/list</li>
+      </ul>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <div class="carousel-demo">
+          <div class="carousel-main">
+            <button type="button" class="carousel-nav carousel-nav-prev" aria-label="Previous">‹</button>
+            Frame 3 of 12
+            <button type="button" class="carousel-nav carousel-nav-next" aria-label="Next">›</button>
+          </div>
+          <div class="carousel-thumbs">
+            <div class="carousel-thumb"></div>
+            <div class="carousel-thumb"></div>
+            <div class="carousel-thumb is-active"></div>
+            <div class="carousel-thumb"></div>
+            <div class="carousel-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Key benefits</h2>
+      <ul>
+        <li>Large central display with smooth navigation</li>
+        <li>Reduced cognitive load vs grid or list for sequential review</li>
+        <li>Touchscreen-friendly when swipe is supported</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('carousel');
+    </script>
+  </body>
+</html>

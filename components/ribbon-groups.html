@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ribbon Groups · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Ribbon Groups</h1>
+      <p class="sg-lead">
+        Ribbon groups are UI containers that organize related controls in Company desktop ribbon bars for efficient feature
+        access.
+      </p>
+
+      <h2>Structure and layout</h2>
+      <ul>
+        <li>Group logically related controls; single row of icons per group.</li>
+        <li>Minimize standalone buttons — use contextual panels or pop-up bars when a tool is active.</li>
+        <li>Order groups to guide primary workflow.</li>
+        <li>Raised elevation with rounded corners; low-contrast dividers between groups (no full borders).</li>
+      </ul>
+
+      <h2>Typography and color</h2>
+      <ul>
+        <li>Standard UI font; legible at all resolutions.</li>
+        <li>Light background #ffffff; dark #1f1f1f; brand accent for active/highlight states.</li>
+        <li>Sufficient contrast for text and icons.</li>
+      </ul>
+
+      <h2>Iconography</h2>
+      <ul>
+        <li>Unique icon per feature/panel; dedicated placeholder — do not reuse ambiguous icons.</li>
+        <li>Consistent style within each group.</li>
+      </ul>
+
+      <h2>Interaction patterns</h2>
+      <ul>
+        <li><strong>Split buttons:</strong> highlight only the arrow region; enlarge arrow hit area.</li>
+        <li><strong>Pop-ups:</strong> single level only — no nested pop-ups.</li>
+        <li><strong>Notification dots:</strong> fully within button region; do not disrupt label alignment.</li>
+        <li><strong>Disabled vs hidden:</strong> prefer disabled unless licensing requires hiding controls.</li>
+      </ul>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <div class="ribbon-demo">
+          <div class="ribbon-group">
+            <div class="ribbon-group-icons">
+              <button type="button" class="ribbon-icon-btn" title="Open">📂</button>
+              <button type="button" class="ribbon-icon-btn" title="Save">💾</button>
+            </div>
+            <span class="ribbon-group-label">File</span>
+          </div>
+          <div class="ribbon-group">
+            <div class="ribbon-group-icons">
+              <button type="button" class="ribbon-icon-btn" title="Measure">📏</button>
+              <button type="button" class="ribbon-icon-btn" title="Count">#</button>
+            </div>
+            <span class="ribbon-group-label">Analyze</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Keyboard navigation through ribbon controls.</li>
+        <li>Screen reader labels for icon-only buttons.</li>
+        <li>WCAG contrast and minimum touch targets.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('ribbon-groups');
+    </script>
+  </body>
+</html>

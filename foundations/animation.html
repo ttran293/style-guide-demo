@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation and Motion · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Animation and Motion</h1>
+      <p class="sg-lead">
+        Animation and motion are UI feedback patterns that guide attention and communicate state changes. Every
+        animation must be purposeful, consistent, and accessible.
+      </p>
+
+      <h2>Durations</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fast</td>
+            <td>150ms</td>
+            <td>Focus states, quick feedback, press</td>
+          </tr>
+          <tr>
+            <td>Normal</td>
+            <td>200ms</td>
+            <td>Hover states, micro-interactions</td>
+          </tr>
+          <tr>
+            <td>Slow</td>
+            <td>300ms</td>
+            <td>State changes, fade in/out</td>
+          </tr>
+          <tr>
+            <td>Slower</td>
+            <td>500ms</td>
+            <td>Validation shake, emphasis</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Easing</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>CSS value</th>
+            <th>Use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>In-out</td>
+            <td><code>cubic-bezier(0.4, 0, 0.2, 1)</code></td>
+            <td>Most interactions, state changes (300ms)</td>
+          </tr>
+          <tr>
+            <td>Out</td>
+            <td><code>cubic-bezier(0, 0, 0.2, 1)</code></td>
+            <td>Hover states, micro-interactions (200ms)</td>
+          </tr>
+          <tr>
+            <td>In</td>
+            <td><code>cubic-bezier(0.4, 0, 1, 1)</code></td>
+            <td>Focus states, quick feedback (150ms)</td>
+          </tr>
+          <tr>
+            <td>Linear</td>
+            <td><code>linear</code></td>
+            <td>Progress indicators, loading</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Interactive demo</h2>
+      <div class="sg-preview">
+        <span class="motion-demo" tabindex="0">Hover or focus me</span>
+        <p class="sg-muted sg-stack-sm">
+          Uses normal duration with ease-out on hover; fast duration on press.
+        </p>
+      </div>
+
+      <h2>Reduced motion</h2>
+      <p>
+        Honor <code>prefers-reduced-motion: reduce</code>. When enabled, animation and transition durations collapse to
+        near-instant values so motion-sensitive users are not affected.
+      </p>
+      <ul>
+        <li><strong>Feedback</strong> — confirm user actions and system responses</li>
+        <li><strong>Guidance</strong> — direct attention to important elements</li>
+        <li><strong>State changes</strong> — communicate transitions between states</li>
+        <li><strong>Seizure safety</strong> — avoid flashing or rapidly changing content</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('animation');
+    </script>
+  </body>
+</html>

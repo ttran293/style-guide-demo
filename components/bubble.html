@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble (Balloon) · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Bubble (Balloon)</h1>
+      <p class="sg-lead">
+        A bubble is a small temporary overlay that appears on click to show extra information, options, or actions
+        without navigating away. Bubbles are card-like surfaces with a directional arrow anchored to the trigger.
+      </p>
+
+      <h2>Definition</h2>
+      <p>
+        Bubbles provide contextual content anchored to a trigger element. They differ from tooltips in that users can
+        interact with content inside (buttons, inputs, links). See
+        <a href="./tooltips-popovers.html">Tooltips &amp; Popovers</a> for trigger behavior and dismissal rules.
+      </p>
+
+      <h2>Anatomy</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Part</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Surface</td>
+            <td>Elevation overlay background (<code>--color-surface-3</code>), 4px radius, overlay shadow</td>
+          </tr>
+          <tr>
+            <td>Border</td>
+            <td>1px <code>--color-border</code> — matches arrow stroke</td>
+          </tr>
+          <tr>
+            <td>Arrow</td>
+            <td>10×10px rotated square; same fill and border as the bubble body; points at the trigger</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Title, body, actions, or menu items — structured layout, sentence case</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Content variants</h2>
+      <p class="sg-muted">Light and dark panels show the same three bubble types side by side. Each includes a trigger and visible arrow.</p>
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Actions</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-secondary">Notifications</button>
+                <div class="popover">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <strong class="popover__title">Notifications</strong>
+                  <p class="popover__text">Export completed for sample.tif. Review results or dismiss.</p>
+                  <div class="popover__actions">
+                    <button type="button" class="btn btn-secondary">Dismiss</button>
+                    <button type="button" class="btn btn-primary">View</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Form</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-secondary">Export</button>
+                <div class="popover popover--narrow">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <strong class="popover__title">Export options</strong>
+                  <label class="check" style="margin-top: var(--space-2); display: flex; align-items: center; gap: var(--space-2)">
+                    <input type="checkbox" checked />
+                    Include metadata
+                  </label>
+                  <div class="popover__actions">
+                    <button type="button" class="btn btn-primary">Export</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Menu</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-tertiary">More</button>
+                <div class="popover popover--narrow">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <ul class="popover__menu">
+                    <li class="popover__menu-item">Duplicate</li>
+                    <li class="popover__menu-item">Rename</li>
+                    <li class="popover__menu-item">Delete</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Actions</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-secondary">Notifications</button>
+                <div class="popover">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <strong class="popover__title">Notifications</strong>
+                  <p class="popover__text">Export completed for sample.tif. Review results or dismiss.</p>
+                  <div class="popover__actions">
+                    <button type="button" class="btn btn-secondary">Dismiss</button>
+                    <button type="button" class="btn btn-primary">View</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Form</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-secondary">Export</button>
+                <div class="popover popover--narrow">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <strong class="popover__title">Export options</strong>
+                  <label class="check" style="margin-top: var(--space-2); display: flex; align-items: center; gap: var(--space-2)">
+                    <input type="checkbox" checked />
+                    Include metadata
+                  </label>
+                  <div class="popover__actions">
+                    <button type="button" class="btn btn-primary">Export</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Menu</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="popover-scene">
+              <div class="popover-anchor">
+                <button type="button" class="btn btn-tertiary">More</button>
+                <div class="popover popover--narrow">
+                  <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                  <ul class="popover__menu">
+                    <li class="popover__menu-item">Duplicate</li>
+                    <li class="popover__menu-item">Rename</li>
+                    <li class="popover__menu-item">Delete</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Arrow placement</h2>
+      <p class="sg-muted">The arrow rotates to point at the anchor on any side. Bubble surface and arrow share the same fill and border color.</p>
+      <div class="sg-preview">
+        <div class="popover-placements">
+          <div class="popover-scene popover-scene--compact">
+            <div class="popover-anchor popover-anchor--above">
+              <div class="popover popover--narrow">
+                <span class="popover__arrow popover__arrow--bottom" aria-hidden="true"></span>
+                <p class="popover__text" style="margin: 0">Above trigger</p>
+              </div>
+              <button type="button" class="btn btn-secondary">Target</button>
+            </div>
+          </div>
+          <div class="popover-scene popover-scene--compact">
+            <div class="popover-anchor">
+              <button type="button" class="btn btn-secondary">Target</button>
+              <div class="popover popover--narrow">
+                <span class="popover__arrow popover__arrow--top" aria-hidden="true"></span>
+                <p class="popover__text" style="margin: 0">Below trigger</p>
+              </div>
+            </div>
+          </div>
+          <div class="popover-scene popover-scene--compact">
+            <div class="popover-anchor popover-anchor--side popover-anchor--side-left">
+              <div class="popover popover--narrow">
+                <span class="popover__arrow popover__arrow--right" aria-hidden="true"></span>
+                <p class="popover__text" style="margin: 0">Left of trigger</p>
+              </div>
+              <button type="button" class="btn btn-secondary">Target</button>
+            </div>
+          </div>
+          <div class="popover-scene popover-scene--compact">
+            <div class="popover-anchor popover-anchor--side">
+              <button type="button" class="btn btn-secondary">Target</button>
+              <div class="popover popover--narrow">
+                <span class="popover__arrow popover__arrow--left" aria-hidden="true"></span>
+                <p class="popover__text" style="margin: 0">Right of trigger</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Platform examples</h2>
+      <ul>
+        <li><strong>Application:</strong> notification bell panel</li>
+        <li><strong>Company web:</strong> ng-bootstrap bubble components for contextual UI</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('bubble');
+    </script>
+  </body>
+</html>

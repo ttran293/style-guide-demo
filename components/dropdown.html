@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdowns · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Dropdowns</h1>
+      <p class="sg-lead">
+        A dropdown is a UI control that presents a compact list for choosing one option or executing actions. This
+        page covers both selection pickers and hierarchical menus.
+      </p>
+
+      <h2>Selection dropdown (standard)</h2>
+      <p>Single option from a predefined set (country, font, category). Fit the maximum useful options without overcrowding; use scroll or grouping for long lists.</p>
+      <div class="sg-preview">
+        <div class="form-group" style="max-width: 240px; margin: 0">
+          <label class="label" for="dd-type">Image type</label>
+          <select class="select" id="dd-type">
+            <option>Brightfield</option>
+            <option>Fluorescence</option>
+            <option>Phase contrast</option>
+            <option>DIC</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Action menu</h2>
+      <p>List of actions or navigation options. Use dividing lines between groups, not full borders.</p>
+      <div class="sg-preview">
+        <div class="dropdown-menu">
+          <button type="button" class="dropdown-item">Open recent</button>
+          <button type="button" class="dropdown-item">Save as</button>
+          <hr class="divider dropdown-divider" />
+          <button type="button" class="dropdown-item">Export to TIFF</button>
+          <button type="button" class="dropdown-item">Export to JPEG</button>
+        </div>
+      </div>
+
+      <h2>Multi-level dropdown</h2>
+      <p>Nested submenus for complex navigation or settings. Show hierarchy with indent, arrows, or icons. Consider back navigation or breadcrumbs for deep trees.</p>
+      <p class="sg-muted"><strong>Skipped for now:</strong> live nested menu demo — needs interaction design decision (hover vs click). Content migrated as guidelines only.</p>
+
+      <h2>UX tips</h2>
+      <ul>
+        <li>Group options by category, relevance, or A–Z.</li>
+        <li>Use dividers or indent for hierarchy.</li>
+        <li>Add search or filter for long or nested lists.</li>
+        <li>Menu items use sentence case.</li>
+        <li>Hover highlight indicates interaction.</li>
+        <li>Use → for internal navigation and ↗ for external links when applicable.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('dropdown');
+    </script>
+  </body>
+</html>

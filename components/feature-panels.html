@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feature Panels · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Feature Panels</h1>
+      <p class="sg-lead">
+        Feature panels are UI surfaces that group related controls for a product feature, including dynamic behavior
+        and wizard-style workflows.
+      </p>
+
+      <h2>General layout principles</h2>
+      <ul>
+        <li>Top-to-bottom, left-to-right workflow progression.</li>
+        <li>Organize controls into logical sections with bold section titles.</li>
+        <li>Number sections when the workflow is strictly ordered.</li>
+        <li>Hide borders on section headers and sub-panels; use spacing instead of shaded backgrounds.</li>
+        <li>Use layout controls so alignment holds on resize.</li>
+        <li><strong>Prefer disabling over hiding</strong>, except when licensing or another control dictates availability.</li>
+      </ul>
+
+      <h2>Sectioning and expandability</h2>
+      <ul>
+        <li>Use expandable sections only when many controls are not all visible at once.</li>
+        <li>Avoid controls on section headers unless content cannot be determined before entering the section.</li>
+        <li>Expandable headers match default section header height.</li>
+      </ul>
+
+      <h2>Control alignment and spacing</h2>
+      <ul>
+        <li>Controls consistently aligned within each panel.</li>
+        <li>Standalone buttons align with left/right margins of other controls.</li>
+        <li>Controls inset from panel edges per Spacing foundation (9px panel inline).</li>
+        <li>Buffer space at top and bottom of subsections.</li>
+      </ul>
+
+      <h2>Single-page panels</h2>
+      <ul>
+        <li>Earlier subsections may trigger layout changes in later ones (resize, visibility).</li>
+        <li>Changes must <strong>not propagate upward</strong> — later sections must not affect earlier ones.</li>
+        <li>Primary action button near the <strong>last control subsection</strong>, not at the bottom of the panel shell.</li>
+      </ul>
+
+      <h2>Multi-page (wizard) panels</h2>
+      <ul>
+        <li>Each page may have a different layout; same top-down change logic as single-page panels.</li>
+        <li>Navigation and primary action buttons near the <strong>bottom of the panel</strong>.</li>
+        <li>Primary button visible when the panel first loads.</li>
+      </ul>
+
+      <h2>Buttons in panels</h2>
+      <ul>
+        <li>Only <strong>one primary action button</strong> per panel.</li>
+        <li>Placement follows alignment rules; maintain visibility throughout the workflow.</li>
+      </ul>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <div class="panel">
+          <div class="panel-header">Export settings</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label class="label" for="fp-format">Output format</label>
+              <select class="select" id="fp-format">
+                <option>TIFF</option>
+                <option>JPEG</option>
+              </select>
+            </div>
+            <details class="collapse" open>
+              <summary class="collapse-trigger">Advanced options</summary>
+              <div class="collapse-panel">
+                <div class="form-group">
+                  <label class="label" for="fp-quality">Quality</label>
+                  <input class="input" id="fp-quality" type="number" value="95" />
+                </div>
+              </div>
+            </details>
+            <button type="button" class="btn btn-primary" style="margin-top: var(--space-4)">Export</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('feature-panels');
+    </script>
+  </body>
+</html>

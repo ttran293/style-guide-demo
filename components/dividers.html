@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dividers · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Dividers</h1>
+      <p class="sg-lead">
+        Dividers are UI elements — thin lines that group content in lists and layouts. Horizontal and vertical rules
+        serve different purposes depending on context.
+      </p>
+
+      <h2>Definition</h2>
+      <p>Dividers separate content into clear groups without enclosing controls in full borders. Use them sparingly — too many dividers clutter the UI.</p>
+
+      <h2>Variants</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Variant</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full width</td>
+            <td>Larger sections of unrelated content; header vs body; interactive vs non-interactive areas</td>
+          </tr>
+          <tr>
+            <td>Inset</td>
+            <td>Related content aligned with panel inline padding (e.g. between list items)</td>
+          </tr>
+          <tr>
+            <td>Vertical</td>
+            <td>Side-by-side regions (toolbar groups, split layouts) — same low-contrast line treatment</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <div class="sg-preview">
+        <p style="margin: 0">Section one content</p>
+        <hr class="divider" />
+        <p style="margin: 0">Section two content</p>
+        <hr class="divider divider-inset" />
+        <p style="margin: 0; padding-left: var(--space-panel-inline)">Inset divider aligns with panel padding</p>
+        <div style="display: flex; gap: var(--space-4); margin-top: var(--space-4); align-items: stretch">
+          <span>Left pane</span>
+          <hr class="divider" style="width: 1px; height: auto; margin: 0; border: none; border-left: var(--border-width) solid var(--color-divider)" />
+          <span>Right pane</span>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Prefer low-contrast dividing lines over full borders between adjacent sections.</li>
+        <li>Use divider color at 1px width.</li>
+        <li>Vertical spacing between sections uses 9px.</li>
+        <li>In notification lists: full-bleed divider between header and content; inset dividers between items.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('dividers');
+    </script>
+  </body>
+</html>

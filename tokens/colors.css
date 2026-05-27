@@ -1,0 +1,114 @@
+/**
+ * Company Style Guide — Color tokens
+ * Source: Buttons + Color Palette pages
+ */
+
+:root,
+[data-theme='light'] {
+  /* Brand */
+  --color-primary: #2967c4;
+  --color-primary-hover: #2358a7;
+  --color-primary-text: #ffffff;
+
+  /* Text */
+  --color-text: #000000;
+  --color-text-secondary: #6c757d;
+  --color-text-disabled: #a0a0a0;
+  --color-text-inverse: #ffffff;
+
+  /* Surfaces (elevation levels) */
+  --color-surface-sunken: #eaeaea;
+  --color-surface-0: #eaeaea;
+  --color-surface-1: #eaeaea;
+  --color-surface-2: #ffffff;
+  --color-surface-3: #ffffff;
+
+  /* Controls */
+  --color-control-bg: #ffffff;
+  --color-control-bg-secondary: #f1f1f1;
+  --color-control-border: #c8c8c8;
+  --color-control-border-active: #2967c4;
+  --color-control-disabled-bg: #f1f1f1;
+  --color-control-disabled-text: #a0a0a0;
+
+  /* Semantic */
+  --color-border: #c8c8c8;
+  --color-border-subtle: #e6e6e6;
+  --color-link: #2967c4;
+  --color-link-hover: #2358a7;
+  --color-link-visited: #551a8b;
+
+  --color-badge-bg: #2967c4;
+  --color-badge-text: #ffffff;
+  --color-badge-secondary-bg: #6c757d;
+
+  --color-divider: rgba(204, 204, 204, 0.5);
+  --color-warning: #e6a700;
+
+  /* Button — secondary & tertiary */
+  --color-btn-secondary-bg: #f1f1f1;
+  --color-btn-secondary-text: #000000;
+  --color-btn-secondary-hover-bg: #e6e6e6;
+  --color-btn-tertiary-bg: transparent;
+  --color-btn-tertiary-text: #000000;
+  --color-btn-tertiary-hover-bg: #e6e6e6;
+
+  /* Page chrome */
+  --color-bg-page: #ffffff;
+  --color-bg-sidebar: #f8f9fa;
+  --color-bg-code: #f1f3f5;
+  --color-bg-example: #ffffff;
+  --color-nav-active-bg: rgba(41, 103, 196, 0.1);
+  --color-toc-active: #2967c4;
+}
+
+[data-theme='dark'] {
+  --color-primary: #395386;
+  --color-primary-hover: #2967c4;
+  --color-primary-text: #ffffff;
+
+  --color-text: #ffffff;
+  --color-text-secondary: #b2b9bf;
+  --color-text-disabled: #525252;
+  --color-text-inverse: #ffffff;
+
+  --color-surface-sunken: #141820;
+  --color-surface-0: #1c2127;
+  --color-surface-1: #2c333b;
+  --color-surface-2: #1c2127;
+  --color-surface-3: #1c2127;
+
+  --color-control-bg: #1c2127;
+  --color-control-bg-secondary: #474747;
+  --color-control-border: #525252;
+  --color-control-border-active: #395386;
+  --color-control-disabled-bg: #474747;
+  --color-control-disabled-text: #525252;
+
+  --color-border: #525252;
+  --color-border-subtle: #474747;
+  --color-link: #6ea8fe;
+  --color-link-hover: #9ec5fe;
+  --color-link-visited: #b794f4;
+
+  --color-badge-bg: #395386;
+  --color-badge-text: #ffffff;
+  --color-badge-secondary-bg: #525252;
+
+  --color-divider: rgba(82, 82, 82, 0.8);
+  --color-warning: #ffc107;
+
+  --color-btn-secondary-bg: #474747;
+  --color-btn-secondary-text: #ffffff;
+  --color-btn-secondary-hover-bg: #525252;
+  --color-btn-tertiary-bg: transparent;
+  --color-btn-tertiary-text: #ffffff;
+  --color-btn-tertiary-hover-bg: #525252;
+
+  --color-bg-page: #1c2127;
+  --color-bg-sidebar: #141820;
+  --color-bg-code: #2c333b;
+  --color-bg-example: #1c2127;
+  --color-nav-active-bg: rgba(110, 168, 254, 0.12);
+  --color-toc-active: #6ea8fe;
+}

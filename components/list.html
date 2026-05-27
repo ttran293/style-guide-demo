@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Lists</h1>
+      <p class="sg-lead">
+        Lists are UI components that organize content vertically for quick scanning — from simple selection lists to
+        multi-line rows with metadata.
+      </p>
+
+      <h2>Principles</h2>
+      <ul>
+        <li><strong>Logical</strong> — meaningful order (alphabetical, numerical, chronological)</li>
+        <li><strong>Actionable</strong> — easy to identify and act on items</li>
+        <li><strong>Consistent</strong> — uniform layouts for icons, text, and actions</li>
+      </ul>
+
+      <h2>Row types</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Single-line</td>
+            <td>One line per item — optimal scannability</td>
+          </tr>
+          <tr>
+            <td>Two-line</td>
+            <td>Primary + secondary text</td>
+          </tr>
+          <tr>
+            <td>Three-line</td>
+            <td>Title, description, metadata (e.g. notifications)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Advanced features (datatable-style)</h2>
+      <p>Datatable behaviors used in Company web products are documented elsewhere. Full datatable page is deferred — summary below:</p>
+      <ul>
+        <li>Selected row highlight; inline edit on hover (pencil icon)</li>
+        <li>Action column per row; column sort icons; add/reorder columns via drag-and-drop</li>
+        <li>Implementation in Company web: ngx-datatable, dx-data-grid</li>
+      </ul>
+      <p class="sg-muted"><strong>Conflict noted:</strong> overlap with Layout → Datatable — unify when that page is built.</p>
+
+      <h2>Example — single-line</h2>
+      <div class="sg-preview">
+        <ul class="list">
+          <li class="list-item">Brightfield_001.tif</li>
+          <li class="list-item is-active">Brightfield_002.tif</li>
+          <li class="list-item">Brightfield_003.tif</li>
+        </ul>
+      </div>
+
+      <h2>Example — two-line</h2>
+      <div class="sg-preview">
+        <ul class="list">
+          <li class="list-item list-item-two-line">
+            <strong>Export completed</strong>
+            <span>sample.tif · 2 minutes ago</span>
+          </li>
+          <li class="list-item list-item-two-line">
+            <strong>Analysis ready</strong>
+            <span>count_cells.ipx · 1 hour ago</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Hover state uses secondary control background.</li>
+        <li>Active item uses primary color with inverted text.</li>
+        <li>Items separated by divider lines, not individual borders.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('list');
+    </script>
+  </body>
+</html>

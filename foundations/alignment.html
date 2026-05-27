@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Alignment</h1>
+      <p class="sg-lead">
+        Alignment is a layout principle that contributes to visual organization and clarity. Consistent alignment helps
+        users predict where to find information and how to interact with controls.
+      </p>
+
+      <h2>Principles</h2>
+      <ul>
+        <li>Consistent alignment creates order and professionalism.</li>
+        <li>Shared edges and columns make forms, tables, and toolbars easier to scan.</li>
+        <li>Match header alignment to the data in each column (text left, numbers right).</li>
+        <li>Primary actions align to the right in dialogs and panels; content stays left-aligned.</li>
+      </ul>
+
+      <h2>Alignment in panels</h2>
+      <p>
+        Desktop feature panels use <strong>right-aligned labels</strong> with a shared control column. Standalone buttons
+        align with the left edge of inputs, not the label column.
+      </p>
+      <div class="sg-preview">
+        <div class="align-demo">
+          <div class="align-row">
+            <label for="align-name">File name</label>
+            <input class="input" id="align-name" type="text" value="sample.tif" />
+          </div>
+          <div class="align-row">
+            <label for="align-width">Width (px)</label>
+            <input class="input" id="align-width" type="number" value="1920" />
+          </div>
+          <div class="align-row">
+            <label for="align-format">Format</label>
+            <select class="select" id="align-format">
+              <option>TIFF</option>
+              <option>JPEG</option>
+              <option>PNG</option>
+            </select>
+          </div>
+          <div class="align-row">
+            <label></label>
+            <div class="align-panel-actions">
+              <button type="button" class="btn btn-secondary">Reset</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+        <p class="align-callout">Label column min-width 100px · 6px gap to controls · actions right-aligned in control column</p>
+      </div>
+
+      <h2>Alignment in web forms</h2>
+      <p>
+        Company web forms stack the label <strong>above</strong> the control. Fields share the same left edge; buttons align
+        with the field column.
+      </p>
+      <div class="sg-preview">
+        <form style="max-width: 320px" onsubmit="return false">
+          <div class="form-group">
+            <label class="label" for="align-web-name">Project name</label>
+            <input class="input" id="align-web-name" type="text" value="Experiment A" />
+          </div>
+          <div class="form-group">
+            <label class="label" for="align-web-type">Image type</label>
+            <select class="select" id="align-web-type">
+              <option>Brightfield</option>
+              <option>Fluorescence</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <h2>Alignment in tables</h2>
+      <p>
+        Text and identifiers are <strong>left-aligned</strong>. Numeric values and units are <strong>right-aligned</strong>
+        so digits line up for comparison. Column headers follow the same alignment as their data.
+      </p>
+      <div class="sg-preview">
+        <table class="align-table-demo">
+          <thead>
+            <tr>
+              <th class="align-col-text">File name</th>
+              <th class="align-col-number">Width</th>
+              <th class="align-col-number">Height</th>
+              <th class="align-col-text">Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="align-col-text">Brightfield_001.tif</td>
+              <td class="align-col-number">1920</td>
+              <td class="align-col-number">1080</td>
+              <td class="align-col-text">TIFF</td>
+            </tr>
+            <tr>
+              <td class="align-col-text">Brightfield_002.tif</td>
+              <td class="align-col-number">2048</td>
+              <td class="align-col-number">1536</td>
+              <td class="align-col-text">TIFF</td>
+            </tr>
+            <tr>
+              <td class="align-col-text">Phase_003.tif</td>
+              <td class="align-col-number">512</td>
+              <td class="align-col-number">512</td>
+              <td class="align-col-text">PNG</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="align-callout">Numeric columns share a right edge · text columns share a left edge</p>
+      </div>
+
+      <h2>Alignment in dialogs</h2>
+      <p>
+        Dialog body copy is left-aligned. Action buttons sit in the footer with the <strong>primary action on the
+        right</strong> and dismiss on the left (Z-pattern reading).
+      </p>
+      <div class="sg-preview">
+        <div class="dialog-demo">
+          <div class="dialog">
+            <div class="dialog-header">Delete measurement</div>
+            <div class="dialog-body">
+              <p style="margin: 0">
+                This removes the selected ROI and its statistics. This action cannot be undone.
+              </p>
+            </div>
+            <div class="dialog-footer">
+              <button type="button" class="btn btn-secondary">Cancel</button>
+              <button type="button" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Alignment in button groups</h2>
+      <p>
+        Ribbon and toolbar controls share a horizontal baseline. Icon buttons center their label under the icon; groups
+        are separated by vertical dividers.
+      </p>
+      <div class="sg-preview">
+        <div class="align-toolbar-demo">
+          <div class="align-toolbar-demo__group">
+            <div class="align-toolbar-demo__item">
+              <span class="align-toolbar-demo__icon" aria-hidden="true"></span>
+              <span class="align-toolbar-demo__label">Copy</span>
+            </div>
+            <div class="align-toolbar-demo__item">
+              <span class="align-toolbar-demo__icon" aria-hidden="true"></span>
+              <span class="align-toolbar-demo__label">Paste</span>
+            </div>
+          </div>
+          <span class="align-toolbar-demo__divider" aria-hidden="true"></span>
+          <div class="align-toolbar-demo__group">
+            <div class="align-toolbar-demo__item">
+              <span class="align-toolbar-demo__icon" aria-hidden="true"></span>
+              <span class="align-toolbar-demo__label">Crop</span>
+            </div>
+            <div class="align-toolbar-demo__item">
+              <span class="align-toolbar-demo__icon" aria-hidden="true"></span>
+              <span class="align-toolbar-demo__label">Rotate</span>
+            </div>
+            <div class="align-toolbar-demo__item">
+              <span class="align-toolbar-demo__icon" aria-hidden="true"></span>
+              <span class="align-toolbar-demo__label">Scale</span>
+            </div>
+          </div>
+        </div>
+        <p class="align-callout">Icons top-aligned · labels centered under each icon · groups separated by dividers</p>
+      </div>
+
+      <h2>Alignment in lists</h2>
+      <p>
+        List rows keep the primary label on the left. Metadata columns (size, type) align to the right in fixed-width
+        columns so values stack vertically across rows.
+      </p>
+      <div class="sg-preview">
+        <ul class="align-list-demo">
+          <li class="align-list-demo__item">
+            <span class="align-list-demo__primary">Brightfield_001.tif</span>
+            <span class="align-list-demo__meta">2.4 MB</span>
+            <span class="align-list-demo__meta">TIFF</span>
+          </li>
+          <li class="align-list-demo__item">
+            <span class="align-list-demo__primary">Brightfield_002.tif</span>
+            <span class="align-list-demo__meta">18 MB</span>
+            <span class="align-list-demo__meta">TIFF</span>
+          </li>
+          <li class="align-list-demo__item">
+            <span class="align-list-demo__primary">Phase_003.tif</span>
+            <span class="align-list-demo__meta">512 KB</span>
+            <span class="align-list-demo__meta">PNG</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Usage reference</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>Alignment</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Panel forms (desktop)</td>
+            <td>Labels right · controls left-aligned column</td>
+            <td>100px min label width; 6px label-to-control gap; inset 9px from panel edge</td>
+          </tr>
+          <tr>
+            <td>Web forms</td>
+            <td>Labels above · fields left-aligned</td>
+            <td>Stacked layout; buttons align with field left edge</td>
+          </tr>
+          <tr>
+            <td>Tables / datatables</td>
+            <td>Text left · numbers right</td>
+            <td>Headers match column data alignment; monospace optional for numeric columns</td>
+          </tr>
+          <tr>
+            <td>Dialogs</td>
+            <td>Body left · actions footer right</td>
+            <td>Primary on the right; secondary/dismiss on the left</td>
+          </tr>
+          <tr>
+            <td>Button groups / ribbon</td>
+            <td>Icons top · labels centered below</td>
+            <td>Single row per group; vertical dividers between groups</td>
+          </tr>
+          <tr>
+            <td>Lists</td>
+            <td>Primary text left · metadata right</td>
+            <td>Fixed metadata columns for scannable size, type, or date values</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('alignment');
+    </script>
+  </body>
+</html>

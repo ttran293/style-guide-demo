@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapse · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Collapse</h1>
+      <p class="sg-lead">
+        Collapse is a UI pattern for hiding and revealing content to reduce visual clutter while preserving access to
+        secondary settings.
+      </p>
+
+      <h2>Purposes</h2>
+      <ul>
+        <li><strong>Space optimization</strong> — hide non-relevant UI on smaller views</li>
+        <li><strong>Content organization</strong> — group related info, collapse unused sections</li>
+        <li><strong>Focus and clarity</strong> — reduce clutter and cognitive load</li>
+        <li><strong>Progressive disclosure</strong> — reveal complexity on demand</li>
+      </ul>
+
+      <h2>Structure</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Container</td>
+            <td>Wraps trigger and expandable panel</td>
+          </tr>
+          <tr>
+            <td>Trigger</td>
+            <td>Clickable summary with chevron arrow — points right when collapsed, down when expanded</td>
+          </tr>
+          <tr>
+            <td>Panel</td>
+            <td>Hidden or revealed content area below the trigger</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Examples</h2>
+      <p class="sg-muted">Click the headers to toggle. The chevron rotates to indicate open or closed state.</p>
+
+      <div class="sg-theme-comparison">
+        <div class="sg-theme-panel" data-theme="light">
+          <p class="sg-theme-panel__title">Light mode</p>
+
+          <h3 style="margin: 0 0 var(--space-2); font-size: var(--text-sm)">Expanded</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <details class="collapse" open>
+              <summary class="collapse-trigger">Advanced options</summary>
+              <div class="collapse-panel">
+                <div class="form-group">
+                  <label class="label" for="col-threshold-light">Probability threshold</label>
+                  <input class="input" id="col-threshold-light" type="number" value="0.95" />
+                </div>
+                <label class="check">
+                  <input type="checkbox" />
+                  Enable logging
+                </label>
+              </div>
+            </details>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Collapsed</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <details class="collapse">
+              <summary class="collapse-trigger">Advanced options</summary>
+              <div class="collapse-panel">
+                <div class="form-group">
+                  <label class="label" for="col-threshold-light-closed">Probability threshold</label>
+                  <input class="input" id="col-threshold-light-closed" type="number" value="0.95" />
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Stacked sections</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="collapse-stack">
+              <details class="collapse" open>
+                <summary class="collapse-trigger">Capture settings</summary>
+                <div class="collapse-panel">
+                  <div class="form-group">
+                    <label class="label" for="col-exposure-light">Exposure (ms)</label>
+                    <input class="input" id="col-exposure-light" type="number" value="100" />
+                  </div>
+                </div>
+              </details>
+              <details class="collapse">
+                <summary class="collapse-trigger">Output format</summary>
+                <div class="collapse-panel">
+                  <div class="form-group">
+                    <label class="label" for="col-format-light">Format</label>
+                    <select class="select" id="col-format-light">
+                      <option>TIFF</option>
+                      <option>JPEG</option>
+                    </select>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="sg-theme-panel" data-theme="dark">
+          <p class="sg-theme-panel__title">Dark mode</p>
+
+          <h3 style="margin: 0 0 var(--space-2); font-size: var(--text-sm)">Expanded</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <details class="collapse" open>
+              <summary class="collapse-trigger">Advanced options</summary>
+              <div class="collapse-panel">
+                <div class="form-group">
+                  <label class="label" for="col-threshold-dark">Probability threshold</label>
+                  <input class="input" id="col-threshold-dark" type="number" value="0.95" />
+                </div>
+                <label class="check">
+                  <input type="checkbox" />
+                  Enable logging
+                </label>
+              </div>
+            </details>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Collapsed</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <details class="collapse">
+              <summary class="collapse-trigger">Advanced options</summary>
+              <div class="collapse-panel">
+                <div class="form-group">
+                  <label class="label" for="col-threshold-dark-closed">Probability threshold</label>
+                  <input class="input" id="col-threshold-dark-closed" type="number" value="0.95" />
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <h3 style="margin: var(--space-4) 0 var(--space-2); font-size: var(--text-sm)">Stacked sections</h3>
+          <div class="sg-preview" style="margin-top: 0">
+            <div class="collapse-stack">
+              <details class="collapse" open>
+                <summary class="collapse-trigger">Capture settings</summary>
+                <div class="collapse-panel">
+                  <div class="form-group">
+                    <label class="label" for="col-exposure-dark">Exposure (ms)</label>
+                    <input class="input" id="col-exposure-dark" type="number" value="100" />
+                  </div>
+                </div>
+              </details>
+              <details class="collapse">
+                <summary class="collapse-trigger">Output format</summary>
+                <div class="collapse-panel">
+                  <div class="form-group">
+                    <label class="label" for="col-format-dark">Format</label>
+                    <select class="select" id="col-format-dark">
+                      <option>TIFF</option>
+                      <option>JPEG</option>
+                    </select>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Chevron sits to the <strong>left</strong> of the trigger label; rotates 90° when expanded.</li>
+        <li>Trigger text uses sentence case and bold weight.</li>
+        <li>Use smooth height transitions (~300ms ease-in-out) when animating expand/collapse in production UI.</li>
+        <li>Honor <code>prefers-reduced-motion</code> for transition duration.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('collapse');
+    </script>
+  </body>
+</html>

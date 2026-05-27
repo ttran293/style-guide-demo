@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Spacing</h1>
+      <p class="sg-lead">
+        Spacing is the rhythm system built on a <strong>3px base grid</strong>. Use multiples of 3 for margins and
+        padding to align with Windows Forms defaults and maintain visual rhythm.
+      </p>
+
+      <h2>Scale</h2>
+      <div class="sg-preview">
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">3px</span>
+          <div class="sg-spacing-bar" style="width: 3px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">6px</span>
+          <div class="sg-spacing-bar" style="width: 6px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">9px</span>
+          <div class="sg-spacing-bar" style="width: 9px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">12px</span>
+          <div class="sg-spacing-bar" style="width: 12px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">18px</span>
+          <div class="sg-spacing-bar" style="width: 18px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">24px</span>
+          <div class="sg-spacing-bar" style="width: 24px"></div>
+        </div>
+        <div class="sg-spacing-bar-wrap">
+          <span class="sg-spacing-label">36px</span>
+          <div class="sg-spacing-bar" style="width: 36px"></div>
+        </div>
+      </div>
+
+      <h2>Margin vs padding</h2>
+      <div class="sg-preview sg-preview--center">
+        <div class="sg-margin-padding-demo">
+          <span class="sg-margin-padding-demo__label">Margin — outside the border</span>
+          <div class="sg-margin-padding-demo__padding">
+            <span class="sg-margin-padding-demo__label">Padding — inside the border</span>
+            <div class="sg-margin-padding-demo__content">Content</div>
+          </div>
+        </div>
+        <ul class="sg-box-model-legend">
+          <li class="sg-box-model-legend__item">
+            <span class="sg-box-model-legend__swatch" style="background: #ff9800"></span>
+            <span><strong>Orange</strong> #ff9800 — margin</span>
+          </li>
+          <li class="sg-box-model-legend__item">
+            <span class="sg-box-model-legend__swatch" style="background: var(--color-surface-2); border-color: #1a1a1a"></span>
+            <span><strong>Surface</strong> — padding area</span>
+          </li>
+          <li class="sg-box-model-legend__item">
+            <span class="sg-box-model-legend__swatch" style="background: var(--color-primary)"></span>
+            <span><strong>Primary</strong> #2967c4 — content</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Usage guidelines</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Panel content margins (left/right/top/bottom)</td>
+            <td>9px (3 × 3)</td>
+          </tr>
+          <tr>
+            <td>Between controls</td>
+            <td>6px (2 × 3)</td>
+          </tr>
+          <tr>
+            <td>Label to associated control</td>
+            <td>3px (1 × 3)</td>
+          </tr>
+          <tr>
+            <td>Between sections in a panel</td>
+            <td>9px (3 × 3)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Units</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Use case</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typography, global layout</td>
+            <td><code>rem</code></td>
+          </tr>
+          <tr>
+            <td>Component spacing tied to font size</td>
+            <td><code>em</code></td>
+          </tr>
+          <tr>
+            <td>Borders, icons, 1px details</td>
+            <td><code>px</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('spacing');
+    </script>
+  </body>
+</html>

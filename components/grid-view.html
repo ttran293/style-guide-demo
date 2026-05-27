@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid View · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Grid View</h1>
+      <p class="sg-lead">
+        Grid view is a UI layout that presents a collection in scrollable rows and columns — best for image-focused
+        collections and side-to-side scanning.
+      </p>
+
+      <h2>Grid types</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Column grid</td>
+            <td>Vertical columns; content aligned to columns</td>
+          </tr>
+          <tr>
+            <td>Modular grid</td>
+            <td>Columns + rows form modules; good for repeatable product rows</td>
+          </tr>
+          <tr>
+            <td>Hierarchical grid</td>
+            <td>Content sized by importance; largest modules for primary items</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Grid item anatomy</h2>
+      <ol>
+        <li>File preview — thumbnail or icon</li>
+        <li>File name — below preview</li>
+        <li>Favourites — star icon</li>
+        <li>Versioning — small icon when applicable</li>
+        <li>Selection — checkbox or highlight when selected</li>
+      </ol>
+
+      <h2>Tiles view</h2>
+      <p>Preview fills the tile; file name, favourites, and checkbox appear on hover or selection. Star stays visible when marked favourite.</p>
+
+      <h2>Example</h2>
+      <div class="sg-preview">
+        <div class="grid-view">
+          <div class="grid-item">
+            <div class="grid-item-preview">IMG</div>
+            sample_01.tif
+          </div>
+          <div class="grid-item is-selected">
+            <div class="grid-item-preview">IMG</div>
+            sample_02.tif
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-preview">IMG</div>
+            sample_03.tif
+          </div>
+          <div class="grid-item">
+            <div class="grid-item-preview">IMG</div>
+            sample_04.tif
+          </div>
+        </div>
+      </div>
+
+      <h2>Usage</h2>
+      <ul>
+        <li>Images, files, products, and media collections</li>
+        <li>Quick multi-item scanning; select, move, and organize items</li>
+        <li>Prefer grid for visual-heavy content; list for text-heavy detail</li>
+        <li>Consider 8px grid alignment for gutters and margins</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('grid-view');
+    </script>
+  </body>
+</html>

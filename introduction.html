@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Introduction</h1>
+      <p class="sg-lead">
+        This site is the Company style guide — a living reference for colors, typography, spacing,
+        components, and usage guidelines used across Company products.
+      </p>
+
+      <h2>What this project is</h2>
+      <p>
+        The Company Style Guide is built as plain <strong>HTML and CSS</strong>, not as screenshots or design files.
+        Every swatch, button, and layout example you see here is rendered from the same styles that define the
+        system. That makes this site the visual source of truth for designers and developers.
+      </p>
+      <ul>
+        <li><strong>Foundations</strong> — color, typography, spacing, shape, elevation, and related basics.</li>
+        <li><strong>Components</strong> — buttons, forms, dialogs, lists, and other reusable UI patterns.</li>
+        <li><strong>Guidelines</strong> — accessibility and other cross-cutting rules.</li>
+      </ul>
+      <h2>What you need</h2>
+      <p>
+        To preview the site locally on your computer, you need <strong>Node.js</strong> installed. Node.js includes
+        <strong>npm</strong> (Node Package Manager), which downloads the small set of tools this project uses to
+        run a local dev server.
+      </p>
+      <p>You do <em>not</em> need to publish or deploy anything just to browse the guide on your machine.</p>
+
+      <h2>What is npm?</h2>
+      <p>
+        <strong>npm</strong> is the standard package manager for JavaScript projects. Think of it as a tool that:
+      </p>
+      <ul>
+        <li>Downloads project dependencies (libraries and build tools) into a <code>node_modules</code> folder.</li>
+        <li>Runs predefined scripts from <code>package.json</code> — for example, starting the local preview server.</li>
+      </ul>
+      <p>
+        When someone shares a project like this one, they usually commit the source files but <em>not</em>
+        <code>node_modules</code>. Running <code>npm install</code> once recreates that folder on your machine.
+      </p>
+
+      <h2>Install Node.js and npm</h2>
+      <ol>
+        <li>
+          Download the <strong>LTS</strong> (Long Term Support) installer from
+          <a class="link" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">nodejs.org</a>.
+        </li>
+        <li>Run the installer and accept the defaults (npm is included automatically).</li>
+        <li>
+          Open a terminal:
+          <ul>
+            <li><strong>Windows</strong> — PowerShell or Command Prompt</li>
+            <li><strong>macOS</strong> — Terminal</li>
+          </ul>
+        </li>
+        <li>Confirm installation:</li>
+      </ol>
+      <pre class="sg-code-block"><code>node -v
+npm -v</code></pre>
+      <p class="sg-muted">
+        Each command should print a version number (for example <code>v22.x.x</code> and <code>10.x.x</code>). If you
+        see “command not found”, close and reopen the terminal after installing Node.
+      </p>
+
+      <h2>Run the style guide locally</h2>
+      <p>From the project folder (where <code>package.json</code> lives):</p>
+
+      <h3>1. Install dependencies (first time only)</h3>
+      <pre class="sg-code-block"><code>npm install</code></pre>
+      <p>This reads <code>package.json</code> and installs Vite, the tool used to serve and build the site.</p>
+
+      <h3>2. Start the dev server</h3>
+      <pre class="sg-code-block"><code>npm run dev</code></pre>
+      <p>
+        The terminal prints a local URL, usually <code>http://localhost:5173</code>. Open that address in your
+        browser. The page reloads automatically when you edit HTML or CSS files.
+      </p>
+
+      <h3>3. Stop the server</h3>
+      <p>In the same terminal window, press <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+
+      <h2>Other npm scripts</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>npm run dev</code></td>
+            <td>Start local preview with hot reload (use this day to day).</td>
+          </tr>
+          <tr>
+            <td><code>npm run build</code></td>
+            <td>Generate a static <code>dist/</code> folder for production hosting.</td>
+          </tr>
+          <tr>
+            <td><code>npm run preview</code></td>
+            <td>Serve the built <code>dist/</code> output locally to test the production build.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Project layout (quick reference)</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Folder / file</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>foundations/</code>, <code>components/</code>, <code>guidelines/</code></td>
+            <td>Style guide pages</td>
+          </tr>
+          <tr>
+            <td><code>styles/</code></td>
+            <td>Shared CSS for the site shell and components</td>
+          </tr>
+          <tr>
+            <td><code>tokens/</code></td>
+            <td>Design values (colors, spacing, etc.) used by the CSS</td>
+          </tr>
+          <tr>
+            <td><code>scripts/layout.js</code></td>
+            <td>Sidebar navigation and theme toggle</td>
+          </tr>
+          <tr>
+            <td><code>index.html</code></td>
+            <td>Home page with links to all sections</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Next steps</h2>
+      <p>
+        Use the sidebar or go to the <a class="link" href="./index.html">home page</a> to browse foundations and
+        components. Toggle light and dark theme from the header on any page.
+      </p>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('introduction');
+    </script>
+  </body>
+</html>

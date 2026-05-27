@@ -1,0 +1,24 @@
+/**
+ * Company Style Guide — Spacing tokens
+ * Base grid: 3px
+ */
+
+:root {
+  --space-unit: 3px;
+
+  --space-1: 3px;
+  --space-2: 6px;
+  --space-3: 9px;
+  --space-4: 12px;
+  --space-5: 15px;
+  --space-6: 18px;
+  --space-8: 24px;
+  --space-10: 30px;
+  --space-12: 36px;
+
+  --space-panel-inline: var(--space-3);
+  --space-panel-block: var(--space-3);
+  --space-control-gap: var(--space-2);
+  --space-label-gap: var(--space-1);
+  --space-section-gap: var(--space-3);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "company-style-guide",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Company design system — HTML/CSS source of truth",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

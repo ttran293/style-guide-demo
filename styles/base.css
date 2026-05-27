@@ -1,0 +1,39 @@
+@import '../tokens/index.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+body:has(.sg-layout) {
+  background: var(--color-surface-sunken);
+}
+
+h1, h2, h3, h4, p {
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+code, .token-name {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+}

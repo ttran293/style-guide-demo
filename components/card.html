@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Cards</h1>
+      <p class="sg-lead">
+        A card is a UI container that groups related content and actions about a single concept — such as a document,
+        contact, or image summary.
+      </p>
+
+      <h2>Anatomy</h2>
+      <ul>
+        <li><strong>Required:</strong> card container</li>
+        <li><strong>Common:</strong> image, headline (+ optional subheading), description, call-to-action</li>
+        <li>Header, body, and footer slots are all optional</li>
+      </ul>
+
+      <h2>Alignment</h2>
+      <ul>
+        <li><strong>Vertical:</strong> header, body, footer stacked</li>
+        <li><strong>Horizontal:</strong> image/media beside header and body</li>
+      </ul>
+
+      <h2>Dividers in cards</h2>
+      <ul>
+        <li>Full-width dividers for expandable content regions</li>
+        <li>Inset dividers (not full width) for related content separation</li>
+      </ul>
+
+      <h2>Example — vertical</h2>
+      <div class="sg-preview">
+        <div class="card">
+          <div class="card-header">Image summary</div>
+          <div class="card-body">
+            <p style="margin: 0 0 var(--space-2)">Dimensions: 1920 × 1080</p>
+            <p style="margin: 0">Format: 16-bit TIFF</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-secondary">Details</button>
+            <button type="button" class="btn btn-primary">Open</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Example — horizontal</h2>
+      <div class="sg-preview">
+        <div class="card card-horizontal">
+          <div class="card-media">Preview</div>
+          <div class="card-body">
+            <strong style="display: block; margin-bottom: var(--space-2)">Brightfield_002.tif</strong>
+            <p style="margin: 0; font-size: var(--text-sm); color: var(--color-text-secondary)">1920 × 1080 · TIFF</p>
+            <button type="button" class="btn btn-tertiary" style="margin-top: var(--space-3)">Open</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Use a subtle border and level-2 surface background.</li>
+        <li>Footer actions align right; one primary button per card.</li>
+        <li>Header uses bold weight with bottom divider.</li>
+        <li>Display cards in grid, vertical list, or carousel; align left, right, or center as layout scales.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('card');
+    </script>
+  </body>
+</html>

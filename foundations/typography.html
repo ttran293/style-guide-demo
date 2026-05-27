@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Typography</h1>
+      <p class="sg-lead">
+        Typography is the type system for the design language. Open Sans is the standard typeface; root font size is
+        15px and all scale steps use <code>rem</code> for consistent sizing.
+      </p>
+
+      <h2>Font family</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Family</td>
+            <td>'Open Sans', system-ui, sans-serif</td>
+          </tr>
+          <tr>
+            <td>Regular weight</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Bold weight</td>
+            <td>700</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Type scale</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Specimen</th>
+            <th>Style</th>
+            <th>rem</th>
+            <th>px @ 15px root</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="type-specimen-3xl">Heading 1</span></td>
+            <td>Heading 1</td>
+            <td>2.25rem</td>
+            <td>33.75px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-2xl">Heading 2</span></td>
+            <td>Heading 2</td>
+            <td>1.875rem</td>
+            <td>28.125px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-xl">Heading 3</span></td>
+            <td>Heading 3</td>
+            <td>1.5rem</td>
+            <td>22.5px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-lg">Heading 4</span></td>
+            <td>Heading 4</td>
+            <td>1.25rem</td>
+            <td>18.75px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-base">Body — default text for UI and content</span></td>
+            <td>Body</td>
+            <td>1rem</td>
+            <td>15px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-sm">Small — secondary text</span></td>
+            <td>Small</td>
+            <td>0.875rem</td>
+            <td>13.125px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-xs">Extra small — compact UI</span></td>
+            <td>Extra small</td>
+            <td>0.8125rem</td>
+            <td>12.19px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-fine">Fine print — captions</span></td>
+            <td>Fine print</td>
+            <td>0.75rem</td>
+            <td>11.25px</td>
+          </tr>
+          <tr>
+            <td><span class="type-specimen-smallest">Smallest — minimal use</span></td>
+            <td>Smallest</td>
+            <td>0.6875rem</td>
+            <td>10.31px</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Line height</h2>
+      <div class="sg-type-specimen">
+        <p class="line-height-tight" style="max-width: 40rem">
+          <strong>Tight (1.25)</strong> — Use for headings and compact UI labels where vertical space is limited.
+        </p>
+        <div class="sg-type-meta">Line height 1.25</div>
+      </div>
+      <div class="sg-type-specimen">
+        <p class="line-height-base" style="max-width: 40rem">
+          <strong>Base (1.5)</strong> — Default for body copy and most interface text. Provides comfortable
+          readability in panels and forms.
+        </p>
+        <div class="sg-type-meta">Line height 1.5</div>
+      </div>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('typography');
+    </script>
+  </body>
+</html>

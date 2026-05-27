@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Accessibility</h1>
+      <p class="sg-lead">
+        Accessibility guidelines ensure products can be used by people with diverse abilities. Follow WCAG 2.1 AA
+        standards.
+      </p>
+
+      <h2>WCAG 2.1 AA — four principles</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Principle</th>
+            <th>Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Perceivable</strong></td>
+            <td>Information presentable in ways users can perceive</td>
+          </tr>
+          <tr>
+            <td><strong>Operable</strong></td>
+            <td>Interface components operable by all users</td>
+          </tr>
+          <tr>
+            <td><strong>Understandable</strong></td>
+            <td>Information and operation must be understandable</td>
+          </tr>
+          <tr>
+            <td><strong>Robust</strong></td>
+            <td>Content works with assistive technologies</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Contrast requirements</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Minimum ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Normal text</td>
+            <td>4.5:1</td>
+          </tr>
+          <tr>
+            <td>Large text (18pt or 14pt bold)</td>
+            <td>3:1</td>
+          </tr>
+          <tr>
+            <td>UI components (borders, focus indicators)</td>
+            <td>3:1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Focus visible demo</h2>
+      <div class="sg-preview">
+        <p style="margin-top: 0">Tab to the button below — focus outline uses primary color at 2px with offset.</p>
+        <button type="button" class="btn btn-primary">Primary action</button>
+      </div>
+
+      <h2>Key practices</h2>
+      <ul>
+        <li>All interactive elements reachable via keyboard; logical tab order.</li>
+        <li>Use semantic HTML (<code>&lt;button&gt;</code>, <code>&lt;nav&gt;</code>, proper headings).</li>
+        <li>Do not rely on color alone — pair with icons or text.</li>
+        <li>Provide ARIA labels where visible text is insufficient.</li>
+        <li>Honor <code>prefers-reduced-motion</code> and high contrast settings.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('accessibility');
+    </script>
+  </body>
+</html>
