@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Summary Snippets · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Data Summary Snippets</h1>
+      <p class="sg-lead">
+        Data summary snippets turn measurements, quality checks, and workflow counts into compact decision support.
+        Use them when users need the state of a dataset before choosing the next action.
+      </p>
+
+      <h2>Summary patterns</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Pattern</th>
+            <th>Best for</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Metric strip</td>
+            <td>Three to four high-level values</td>
+            <td>Keep labels short and values directly comparable</td>
+          </tr>
+          <tr>
+            <td>Insight card</td>
+            <td>One finding with supporting details</td>
+            <td>Explain what changed and why it matters</td>
+          </tr>
+          <tr>
+            <td>Review summary</td>
+            <td>Before export, approval, or batch actions</td>
+            <td>Pair status with the recommended next step</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Example - metric strip</h2>
+      <div class="sg-preview">
+        <div class="snippet-summary-grid">
+          <article class="snippet-metric">
+            <h3>Images reviewed</h3>
+            <span class="snippet-metric-value">128</span>
+            <span class="snippet-trend snippet-trend--good"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>24 since yesterday</span>
+          </article>
+          <article class="snippet-metric">
+            <h3>Flagged items</h3>
+            <span class="snippet-metric-value">7</span>
+            <span class="snippet-trend">Needs manual review</span>
+          </article>
+          <article class="snippet-metric">
+            <h3>Export readiness</h3>
+            <span class="snippet-metric-value">94%</span>
+            <span class="snippet-trend snippet-trend--good">Ready after 2 fixes</span>
+          </article>
+        </div>
+      </div>
+
+      <h2>Example - insight card</h2>
+      <div class="sg-preview">
+        <article class="snippet-insight">
+          <p class="snippet-eyebrow">Quality insight</p>
+          <h3>Focus drift detected in later captures</h3>
+          <p>Sharpness drops after image 86. Review the acquisition sequence before approving the batch.</p>
+          <div class="snippet-insight-list">
+            <div class="snippet-insight-row">
+              <span>First affected image</span>
+              <span>BF_0086.tif</span>
+            </div>
+            <div class="snippet-insight-row">
+              <span>Average confidence</span>
+              <span>82%</span>
+            </div>
+            <div class="snippet-insight-row">
+              <span>Suggested action</span>
+              <span>Inspect flagged range</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h2>Example - review summary</h2>
+      <div class="sg-preview">
+        <div class="snippet-shell">
+          <header class="snippet-header">
+            <div class="snippet-header-main">
+              <p class="snippet-eyebrow">Batch export</p>
+              <div class="snippet-title-row">
+                <h2 class="snippet-title">Ready to export with warnings</h2>
+                <span class="badge badge-secondary">2 warnings</span>
+              </div>
+              <p class="snippet-subtitle">Most images passed validation. Two metadata fields need confirmation.</p>
+            </div>
+            <div class="snippet-actions">
+              <button type="button" class="btn btn-secondary">Review warnings</button>
+              <button type="button" class="btn btn-primary">Export batch</button>
+            </div>
+          </header>
+          <div class="snippet-meta">
+            <span class="snippet-meta-item">Format: OME-TIFF</span>
+            <span class="snippet-meta-item">Size estimate: 1.8 GB</span>
+            <span class="snippet-meta-item">Destination: Shared archive</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Use summaries to support a decision, not to replace detailed tables or charts.</li>
+        <li>Keep values visible, but use labels and helper text to prevent misinterpretation.</li>
+        <li>Put warnings close to the action they affect.</li>
+        <li>Use trend color sparingly; neutral text is preferred unless the direction changes user behavior.</li>
+      </ul>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Do not encode status with color alone; include text such as "warnings" or "ready".</li>
+        <li>Use headings for each metric group so screen reader users can scan summaries.</li>
+        <li>Keep action order consistent: secondary actions first, primary action last.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('snippets-data-summaries');
+    </script>
+  </body>
+</html>

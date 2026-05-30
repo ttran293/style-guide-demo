@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Header Snippets · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Page Header Snippets</h1>
+      <p class="sg-lead">
+        Page header snippets combine title, status, metadata, and primary actions into a reusable top-of-page pattern.
+        Use them to make complex workflows feel oriented before users reach the main content.
+      </p>
+
+      <h2>Choose the right header</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Snippet</th>
+            <th>Use for</th>
+            <th>Main behavior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Workspace header</td>
+            <td>Project, dataset, or acquisition pages</td>
+            <td>Shows current status, ownership, and the primary workflow action</td>
+          </tr>
+          <tr>
+            <td>Filter header</td>
+            <td>Search-heavy lists and review queues</td>
+            <td>Pairs a short title with persistent filter controls</td>
+          </tr>
+          <tr>
+            <td>Review header</td>
+            <td>Approval, QA, or inspection screens</td>
+            <td>Surfaces risk, progress, and next action without opening a panel</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Example - workspace header</h2>
+      <div class="sg-preview">
+        <div class="snippet-shell">
+          <header class="snippet-header">
+            <div class="snippet-header-main">
+              <p class="snippet-eyebrow">Microscopy workspace</p>
+              <div class="snippet-title-row">
+                <h2 class="snippet-title">Sentinel-1 batch review</h2>
+                <span class="badge badge-secondary">Draft</span>
+              </div>
+              <p class="snippet-subtitle">42 images imported from C:\Users\Public\Documents\...</p>
+            </div>
+            <div class="snippet-actions">
+              <button type="button" class="btn btn-secondary">Share</button>
+              <button type="button" class="btn btn-primary">Start review</button>
+            </div>
+          </header>
+          <div class="snippet-meta">
+            <span class="snippet-meta-item"><i class="fa-solid fa-clock icon" aria-hidden="true"></i>Updated 8 minutes ago</span>
+            <span class="snippet-meta-item"><i class="fa-solid fa-user icon" aria-hidden="true"></i>Owner: Imaging Team</span>
+            <span class="snippet-meta-item"><i class="fa-solid fa-layer-group icon" aria-hidden="true"></i>3 protocols attached</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Example - filter header</h2>
+      <div class="sg-preview">
+        <div class="snippet-shell">
+          <header class="snippet-header">
+            <div class="snippet-header-main">
+              <p class="snippet-eyebrow">Review queue</p>
+              <h2 class="snippet-title">Images needing attention</h2>
+              <p class="snippet-subtitle">Resolve failed imports before exporting the batch.</p>
+            </div>
+            <div class="snippet-actions">
+              <button type="button" class="btn btn-tertiary">Reset</button>
+              <button type="button" class="btn btn-secondary">Export list</button>
+            </div>
+          </header>
+          <div class="snippet-filter-bar">
+            <input class="input snippet-search" type="search" placeholder="Search filename or tag" aria-label="Search queue" />
+            <select class="select" aria-label="Filter by status">
+              <option>Failed only</option>
+              <option>Warnings</option>
+              <option>All items</option>
+            </select>
+            <button type="button" class="btn btn-secondary">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>When to use</h2>
+      <ul>
+        <li>Use on pages where users need context before acting.</li>
+        <li>Use when status, metadata, and actions belong to the entire page.</li>
+        <li>Use one primary action at most; keep secondary actions visually quieter.</li>
+      </ul>
+
+      <h2>When not to use</h2>
+      <ul>
+        <li>Do not use for small cards or modal sections; use a card header or dialog title instead.</li>
+        <li>Do not repeat the same metadata again in the first panel unless it changes state.</li>
+        <li>Do not put destructive actions in the header without confirmation.</li>
+      </ul>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Keep the page title as the first meaningful heading in the content area.</li>
+        <li>Use real buttons for actions and real form controls for filters.</li>
+        <li>Badges supplement the heading; they should not be the only place status is explained.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('snippets-page-headers');
+    </script>
+  </body>
+</html>

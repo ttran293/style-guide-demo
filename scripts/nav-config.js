@@ -75,6 +75,15 @@ export const NAV = [
     ],
   },
   {
+    title: 'Snippets',
+    slug: 'snippets',
+    items: [
+      { href: '/components/snippets-page-headers.html', label: 'Page Headers', id: 'snippets-page-headers', description: 'Ready-made page title, metadata, action, and filter header layouts', keywords: 'snippet header toolbar actions filter' },
+      { href: '/components/snippets-empty-states.html', label: 'Empty States', id: 'snippets-empty-states', description: 'First-use, no-results, and blocked-state recovery patterns', keywords: 'snippet empty no results blank state recovery' },
+      { href: '/components/snippets-data-summaries.html', label: 'Data Summaries', id: 'snippets-data-summaries', description: 'Metric strips, insight cards, and review summary snippets', keywords: 'snippet metric summary insight dashboard' },
+    ],
+  },
+  {
     title: 'Navigation',
     slug: 'navigation',
     items: [

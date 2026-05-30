@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empty State Snippets · Company Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="sg-content-source">
+      <h1>Empty State Snippets</h1>
+      <p class="sg-lead">
+        Empty states explain why content is missing and give users a practical next step. They should feel calm, specific,
+        and recoverable rather than decorative.
+      </p>
+
+      <h2>Empty state types</h2>
+      <table class="sg-spec-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Message goal</th>
+            <th>Action style</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First use</td>
+            <td>Invite the user to create or import content</td>
+            <td>One primary action</td>
+          </tr>
+          <tr>
+            <td>No results</td>
+            <td>Explain that filters are hiding content</td>
+            <td>Secondary reset action</td>
+          </tr>
+          <tr>
+            <td>Blocked</td>
+            <td>Tell the user what dependency is missing</td>
+            <td>Specific fix or request access action</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Example - first use</h2>
+      <div class="sg-preview">
+        <div class="snippet-empty">
+          <span class="snippet-empty-icon" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></span>
+          <h3>No images in this workspace yet</h3>
+          <p>Import a TIFF, JPEG, or OME file to begin building a review set.</p>
+          <div class="snippet-actions">
+            <button type="button" class="btn btn-secondary">Browse demo images</button>
+            <button type="button" class="btn btn-primary">Import images</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Example - no results</h2>
+      <div class="sg-preview">
+        <div class="snippet-shell">
+          <div class="snippet-filter-bar">
+            <input class="input snippet-search" type="search" value="gamma high confidence" aria-label="Search files" />
+            <button type="button" class="btn btn-secondary">Clear filters</button>
+          </div>
+          <div class="snippet-body">
+            <div class="snippet-empty">
+              <span class="snippet-empty-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <h3>No matching files</h3>
+              <p>Try a shorter filename, remove confidence filters, or search by acquisition date.</p>
+              <button type="button" class="btn btn-secondary">Show all files</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Example - blocked state</h2>
+      <div class="sg-preview">
+        <div class="snippet-empty">
+          <span class="snippet-empty-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
+          <h3>Protocol library unavailable</h3>
+          <p>You can review existing results, but adding a new protocol requires access to the shared library.</p>
+          <div class="snippet-actions">
+            <button type="button" class="btn btn-tertiary">Continue without protocol</button>
+            <button type="button" class="btn btn-secondary">Request access</button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Lead with the reason content is missing, not a generic "nothing here" message.</li>
+        <li>Use one preferred action when the user can recover immediately.</li>
+        <li>Use secondary or tertiary actions when the next step is optional.</li>
+        <li>Keep illustrations small and symbolic; content and actions carry the meaning.</li>
+      </ul>
+
+      <h2>Accessibility</h2>
+      <ul>
+        <li>Do not rely on the icon alone; the heading and body copy must explain the state.</li>
+        <li>Use semantic buttons for recovery actions.</li>
+        <li>If an empty state appears after filtering, announce the result count in the surrounding app logic.</li>
+      </ul>
+    </div>
+    <div class="sg-layout" id="sg-root"></div>
+    <script type="module">
+      import { initLayout } from '/scripts/layout.js';
+      initLayout('snippets-empty-states');
+    </script>
+  </body>
+</html>
